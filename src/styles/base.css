@@ -8,3 +8,32 @@
   font-stretch: 75% 125%;
   src: url('../fonts/Mona-Sans.var.woff2') format('woff2');
 }
+.fade-x:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: -2px;
+  z-index: 1;
+  width: 50%;
+  pointer-events: none;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, #000 100%);
+  z-index: 10;
+}
+.fade-x:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -2px;
+  z-index: 1;
+  pointer-events: none;
+  width: 50%;
+  background: linear-gradient(90deg, #000 0%, #00000000 100%);
+}
+.loop-swiper .swiper-slide {
+  width: auto;
+}
+.swiper-wrapper {
+  transition-timing-function: linear !important;
+}

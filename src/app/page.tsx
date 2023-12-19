@@ -20,6 +20,7 @@ import logoPhobiaLight from '@/images/clients/phobia/logo-light.svg'
 import logoUnseal from '@/images/clients/unseal/logo-light.svg'
 import imageLaptop from '@/images/laptop.jpg'
 import { type CaseStudy, type MDXEntry, loadCaseStudies } from '@/lib/mdx'
+import NokIcons from '@/components/NokIcons'
 
 const clients = [
   ['Phobia', logoPhobiaLight],
@@ -34,13 +35,17 @@ const clients = [
 
 function Clients() {
   return (
-    <div className="mt-24 rounded-4xl bg-neutral-950 py-20 sm:mt-32 sm:py-32 lg:mt-56">
+    <div className="lg:mt-50 mt-24 rounded-4xl bg-black sm:mt-32 sm:py-10 lg:py-10">
       <Container>
+        <div className="fade-x relative w-full bg-black p-5 ">
+          <NokIcons name="header-icons" loop={true} />
+        </div>
+
         <FadeIn className="flex items-center gap-x-8">
           <h2 className="text-center font-display text-sm font-semibold tracking-wider text-white sm:text-left">
-            We’ve worked with hundreds of amazing people
+            Our subsidiaries and partners
           </h2>
-          <div className="h-px flex-auto bg-neutral-800" />
+          <div className="h-px flex-auto bg-neutral-600" />
         </FadeIn>
         <FadeInStagger faster>
           <ul
