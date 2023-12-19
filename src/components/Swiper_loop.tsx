@@ -91,23 +91,25 @@ export const Loop_Swiper_wrapper: FC<Loop_Swiper_wrapperPROPS> = ({
   return (
     <div className={`swiper-wrapper-icons-${name || ''}`}>
       <Swiper
-        spaceBetween={225}
+        spaceBetween={200}
         speed={10000}
-        loop={loop}
-        centeredSlides={true}
+        loop={true}
+        // centeredSlides={true}
         autoplay={
           loop
             ? {
                 delay: 0,
                 disableOnInteraction: false,
-                waitForTransition: false,
+                waitForTransition: true,
+                reverseDirection: true,
               }
             : false
         }
-        // slidesPerView={'auto'}
-        slidesPerView={3}
-        modules={[Autoplay, Navigation, Pagination, Scrollbar, A11y]}
+        slidesPerView={'auto'}
+        // slidesPerView={3.5}
+        modules={[Autoplay]}
         className="loop-swiper"
+        pagination={true}
       >
         {children}
       </Swiper>

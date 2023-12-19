@@ -35,9 +35,9 @@ const clients = [
 
 function Clients() {
   return (
-    <div className="lg:mt-50 mt-24 rounded-4xl bg-black sm:mt-32 sm:py-10 lg:py-10">
+    <div className="mt-24 rounded-4xl bg-black py-5 sm:mt-32 lg:mt-60">
       <Container>
-        <div className="fade-x relative w-full bg-black p-5 ">
+        <div className="fade-x relative bg-black py-5 ">
           <NokIcons name="header-icons" loop={true} />
         </div>
 
