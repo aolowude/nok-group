@@ -1,20 +1,23 @@
+'use client'
+
 import React, { FC, useState, useEffect } from 'react'
 import Image, { StaticImageData } from 'next/image'
 import { iconImages } from '../data/images/icons/export'
 import Divider from './Divider'
 
 import { Swiper, SwiperSlide } from 'swiper/react'
-// import { Autoplay } from 'swiper/modules'
-import {
-  Autoplay,
-  Navigation,
-  Pagination,
-  Scrollbar,
-  A11y,
-} from 'swiper/modules'
+import { Autoplay } from 'swiper/modules'
 
 import 'swiper/css'
 import 'swiper/css/bundle'
+import { useDeviceSize } from '@/lib/utils'
+
+import {
+  BrowserView,
+  MobileView,
+  isBrowser,
+  isMobile,
+} from 'react-device-detect'
 
 function Swiper_loop() {
   const [carousel1, setCarousel1] = useState(null as null | StaticImageData[])
@@ -55,20 +58,18 @@ function Swiper_loop() {
   }
 
   return (
-    <div className="relative pb-[165px] pt-[0px] lg:pb-[250px] lg:pt-[100px]">
-      <Divider />
-
+    <div className="relative pb-[20px] pt-[0px] lg:pb-[30px] lg:pt-[5px]">
       <div className="fade-x relative">
-        <div className="mt-[80px] flex flex-col gap-[60px] lg:mt-[60px]">
-          <Loop_Swiper_wrapper loop>
+        <div className="mt-[40px] flex flex-col gap-[60px] lg:mt-[20px]">
+          <Loop_Swiper_Partners__wrapper loop>
             {renderCarousel(carousel1 || null)}
-          </Loop_Swiper_wrapper>
-          <Loop_Swiper_wrapper loop>
+          </Loop_Swiper_Partners__wrapper>
+          <Loop_Swiper_Partners__wrapper loop>
             {renderCarousel(carousel2 || null)}
-          </Loop_Swiper_wrapper>
-          <Loop_Swiper_wrapper loop>
+          </Loop_Swiper_Partners__wrapper>
+          <Loop_Swiper_Partners__wrapper loop>
             {renderCarousel(carousel3 || null)}
-          </Loop_Swiper_wrapper>
+          </Loop_Swiper_Partners__wrapper>
         </div>
       </div>
     </div>
@@ -86,12 +87,56 @@ export const Loop_Swiper_wrapper: FC<Loop_Swiper_wrapperPROPS> = ({
   name,
   loop,
 }) => {
+  const [width, height] = useDeviceSize()
+
   if (!children) return null
+
+  const isSmallScreen = width < 800
 
   return (
     <div className={`swiper-wrapper-icons-${name || ''}`}>
       <Swiper
-        spaceBetween={200}
+        spaceBetween={isSmallScreen ? 100 : 50}
+        speed={10000 / 2}
+        loop={true}
+        // centeredSlides={true}
+        autoplay={
+          loop
+            ? {
+                delay: 0,
+                disableOnInteraction: false,
+                waitForTransition: true,
+                reverseDirection: true,
+              }
+            : false
+        }
+        // slidesPerView={'auto'}
+        slidesPerView={isSmallScreen ? 2 : 3}
+        modules={[Autoplay]}
+        className="loop-swiper"
+        pagination={true}
+      >
+        {children}
+      </Swiper>
+    </div>
+  )
+}
+
+export const Loop_Swiper_Partners__wrapper: FC<Loop_Swiper_wrapperPROPS> = ({
+  children,
+  name,
+  loop,
+}) => {
+  const [width, height] = useDeviceSize()
+
+  if (!children) return null
+
+  const isSmallScreen = width < 800
+
+  return (
+    <div className={`swiper-wrapper-icons-${name || ''}`}>
+      <Swiper
+        spaceBetween={isSmallScreen ? 50 : 75}
         speed={10000}
         loop={true}
         // centeredSlides={true}
@@ -105,11 +150,11 @@ export const Loop_Swiper_wrapper: FC<Loop_Swiper_wrapperPROPS> = ({
               }
             : false
         }
-        slidesPerView={'auto'}
-        // slidesPerView={3.5}
+        // slidesPerView={'auto'}
+        slidesPerView={isSmallScreen ? 3 : 5}
         modules={[Autoplay]}
         className="loop-swiper"
-        pagination={true}
+        pagination={false}
       >
         {children}
       </Swiper>

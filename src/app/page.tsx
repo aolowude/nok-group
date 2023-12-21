@@ -21,6 +21,11 @@ import logoUnseal from '@/images/clients/unseal/logo-light.svg'
 import imageLaptop from '@/images/laptop.jpg'
 import { type CaseStudy, type MDXEntry, loadCaseStudies } from '@/lib/mdx'
 import NokIcons from '@/components/NokIcons'
+import NokAcademy from '../data/NokAcademy'
+import NokMedia from '../data/NokMedia'
+import NokPay from '../data/NokPay'
+import NokTech from '../data/NokTech'
+import Swiper_loop from '../components/Swiper_loop'
 
 const clients = [
   ['Phobia', logoPhobiaLight],
@@ -35,6 +40,7 @@ const clients = [
 
 function Clients() {
   return (
+    // <div className="max-w-8xl mx-auto mt-24 px-6 sm:mt-32 lg:mt-40 lg:px-8">
     <div className="mt-24 rounded-4xl bg-black py-5 sm:mt-32 lg:mt-60">
       <Container>
         <div className="fade-x relative bg-black py-5 ">
@@ -45,24 +51,15 @@ function Clients() {
           <h2 className="text-center font-display text-sm font-semibold tracking-wider text-white sm:text-left">
             Our subsidiaries and partners
           </h2>
+
           <div className="h-px flex-auto bg-neutral-600" />
         </FadeIn>
         <FadeInStagger faster>
-          <ul
-            role="list"
-            className="mt-10 grid grid-cols-2 gap-x-8 gap-y-10 lg:grid-cols-4"
-          >
-            {clients.map(([client, logo]) => (
-              <li key={client}>
-                <FadeIn>
-                  <Image src={logo} alt={client} unoptimized />
-                </FadeIn>
-              </li>
-            ))}
-          </ul>
+          <Swiper_loop />
         </FadeInStagger>
       </Container>
     </div>
+    // </div>
   )
 }
 
@@ -199,6 +196,8 @@ export default async function Home() {
       </Container>
 
       <Clients />
+
+      {/* <NokPay /> */}
 
       <CaseStudies caseStudies={caseStudies} />
 
