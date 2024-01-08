@@ -71,13 +71,13 @@ function CaseStudies({
   return (
     <>
       <SectionIntro
-        title="Harnessing technology for a brighter future"
+        title="Simplifying banking with technology"
         className="mt-24 sm:mt-32 lg:mt-40"
       >
         <p>
-          We believe technology is the answer to the world’s greatest
-          challenges. It’s also the cause, so we find ourselves in bit of a
-          catch 22 situation.
+          We are a team of global experts building an all encompassing ecosystem
+          comprising of payment infrastructure, business empowerment and
+          multimedia delivery
         </p>
       </SectionIntro>
       <Container className="mt-16">
@@ -96,7 +96,8 @@ function CaseStudies({
                     />
                   </Link>
                 </h3>
-                <p className="mt-6 flex gap-x-2 text-sm text-neutral-950">
+
+                {/* <p className="mt-6 flex gap-x-2 text-sm text-neutral-950">
                   <time
                     dateTime={caseStudy.date.split('-')[0]}
                     className="font-semibold"
@@ -107,7 +108,8 @@ function CaseStudies({
                     /
                   </span>
                   <span>Case study</span>
-                </p>
+                </p> */}
+
                 <p className="mt-6 font-display text-2xl font-semibold text-neutral-950">
                   {caseStudy.title}
                 </p>
@@ -190,14 +192,19 @@ export default async function Home() {
             Revolutionary financial system for the African market.
           </h1>
           <p className="mt-6 text-xl text-neutral-600">
-            Backed by blockchain banking
+            Bridging the gap between traditional fiat currency and decentralised
+            finance.
           </p>
         </FadeIn>
       </Container>
 
       <Clients />
 
-      {/* <NokPay /> */}
+      {/* <Container className="mt-24 sm:mt-32 md:mt-56">
+        <FadeIn className="max-w-3xl">
+          <NokPay />
+        </FadeIn>
+      </Container> */}
 
       <CaseStudies caseStudies={caseStudies} />
 

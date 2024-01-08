@@ -195,12 +195,7 @@ export default async function About() {
           puts our clients at the center of everything we do.
         </p>
         <div className="mt-10 max-w-2xl space-y-6 text-base">
-          <p>
-            Studio was started by three friends who noticed that developer
-            studios were charging clients double what an in-house team would
-            cost. Since the beginning, we have been committed to doing things
-            differently by charging triple instead.
-          </p>
+          <p>Nok was started to simplify banking for all.</p>
           <p>
             At Studio, we’re more than just colleagues — we’re a family. This
             means we pay very little and expect people to work late. We want our
@@ -211,9 +206,9 @@ export default async function About() {
       </PageIntro>
       <Container className="mt-16">
         <StatList>
-          <StatListItem value="35" label="Underpaid employees" />
-          <StatListItem value="52" label="Placated clients" />
-          <StatListItem value="$25M" label="Invoices billed" />
+          <StatListItem value="35" label="partners" />
+          <StatListItem value="52" label="countries" />
+          <StatListItem value="$500K" label="raised" />
         </StatList>
       </Container>
 
