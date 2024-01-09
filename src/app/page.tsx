@@ -149,25 +149,18 @@ function Services() {
               />
             </FadeIn>
           </div>
-          <List className="mt-16 lg:mt-0 lg:w-1/2 lg:min-w-[33rem] lg:pl-4">
-            <ListItem title="Web development">
-              We specialise in crafting beautiful, high quality marketing pages.
-              The rest of the website will be a shell that uses lorem ipsum
-              everywhere.
+          <List className="mt-16 lg:mt-0 lg:w-1/2 lg:min-w-[40rem] lg:pl-4">
+            <ListItem title="NokTech ($NOK)" color="green">
+              {`We possess ownership over cutting-edge technology, smart contracts, and the distribution of the world's pioneering decentralized stabilized basket token. Crafted by leading experts in tokenomics and blockchain technology, NokTech ($NOK) spearheads the advancement of innovative financial instruments.`}
             </ListItem>
-            <ListItem title="Application development">
-              We have a team of skilled developers who are experts in the latest
-              app frameworks, like Angular 1 and Google Web Toolkit.
+            <ListItem title="NokPay" color="black">
+              {`NokPay presents a comprehensive retail and B2B banking platform empowered by fully owned proprietary technology. Our robust infrastructure integrates multiple banking licenses, KYC/AML compliance, On/Off Ramp facilities, multi-jurisdictional account opening, digital asset wallet creation, P2P payments, staking, yielding, rewards programs, and card issuing capabilities. We've augmented this platform with custom-built Artificial Intelligence and Blockchain technology for enhanced efficiency and security.`}
             </ListItem>
-            <ListItem title="E-commerce">
-              We are at the forefront of modern e-commerce development. Which
-              mainly means adding your logo to the Shopify store template we’ve
-              used for the past six years.
+            <ListItem title="NokMedia" color="indigo">
+              {`We hold exclusive rights to establish and operate co-branded digital, radio, and TV media publications in collaboration with global media owners. These partnerships enable us to distribute content across Africa, leveraging full marketing expertise to effectively launch, expand, and strengthen our product portfolio.`}
             </ListItem>
-            <ListItem title="Custom content management">
-              At Studio we understand the importance of having a robust and
-              customised CMS. That’s why we run all of our client projects out
-              of a single, enormous Joomla instance.
+            <ListItem title="NokAcademy" color="orange">
+              {`In partnership with AAASME and AU, NokAcademy is primed for a full-fledged launch. This initiative aims to identify, develop, and tokenize African-based businesses. NokAcademy stands as an owned and operated portfolio business unit committed to fostering business growth and innovation.`}
             </ListItem>
           </List>
         </div>
@@ -212,9 +205,10 @@ export default async function Home() {
         className="mt-24 sm:mt-32 lg:mt-40"
         client={{ name: 'Phobia', logo: logoPhobiaDark }}
       >
-        The team at Nok went above and beyond with our onboarding, even finding
-        a way to access the user’s microphone without triggering one of those
-        annoying permission dialogs.
+        Here at the NokGroup our vision is of an all-inclusive ecosystem that
+        removes the divide between traditional fiat currency and the
+        decentralised financial economy, aiding in the digitalisation of the
+        African continent.
       </Testimonial>
 
       <Services />
