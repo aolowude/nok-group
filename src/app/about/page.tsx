@@ -22,7 +22,14 @@ import imageLeonardKrasner from '@/images/team/leonard-krasner.jpg'
 import imageLeslieAlexander from '@/images/team/leslie-alexander.jpg'
 import imageMichaelFoster from '@/images/team/michael-foster.jpg'
 import imageWhitneyFrancis from '@/images/team/whitney-francis.jpg'
+//NokImages
+import imageGregCussell from '@/data/images/team/gregCussell.jpg'
+import imageChuOkadigbo from '@/data/images/team/chineduOkadigbo.jpeg'
+import imageTimOBrien from '@/data/images/team/timOBrien.jpeg'
+import imageAndrewOlowude from '@/data/images/team/andrewOlowude.jpeg'
+
 import { loadArticles } from '@/lib/mdx'
+import Link from 'next/link'
 
 function Culture() {
   return (
@@ -58,103 +65,99 @@ function Culture() {
 
 const team = [
   {
-    title: 'Leadership',
-    people: [
-      {
-        name: 'Leslie Alexander',
-        role: 'Co-Founder / CEO',
-        image: { src: imageLeslieAlexander },
-      },
-      {
-        name: 'Michael Foster',
-        role: 'Co-Founder / CTO',
-        image: { src: imageMichaelFoster },
-      },
-      {
-        name: 'Dries Vincent',
-        role: 'Partner & Business Relations',
-        image: { src: imageDriesVincent },
-      },
-    ],
+    name: 'Greg Cussell',
+    role: 'Co-Founder / CEO',
+    image: { src: imageGregCussell },
+    url: 'https://www.linkedin.com/in/greg-cussell-7b650415/',
   },
   {
-    title: 'Team',
-    people: [
-      {
-        name: 'Chelsea Hagon',
-        role: 'Senior Developer',
-        image: { src: imageChelseaHagon },
-      },
-      {
-        name: 'Emma Dorsey',
-        role: 'Senior Designer',
-        image: { src: imageEmmaDorsey },
-      },
-      {
-        name: 'Leonard Krasner',
-        role: 'VP, User Experience',
-        image: { src: imageLeonardKrasner },
-      },
-      {
-        name: 'Blake Reid',
-        role: 'Junior Copywriter',
-        image: { src: imageBlakeReid },
-      },
-      {
-        name: 'Kathryn Murphy',
-        role: 'VP, Human Resources',
-        image: { src: imageKathrynMurphy },
-      },
-      {
-        name: 'Whitney Francis',
-        role: 'Content Specialist',
-        image: { src: imageWhitneyFrancis },
-      },
-      {
-        name: 'Jeffrey Webb',
-        role: 'Account Coordinator',
-        image: { src: imageJeffreyWebb },
-      },
-      {
-        name: 'Benjamin Russel',
-        role: 'Senior Developer',
-        image: { src: imageBenjaminRussel },
-      },
-      {
-        name: 'Angela Fisher',
-        role: 'Front-end Developer',
-        image: { src: imageAngelaFisher },
-      },
-    ],
+    name: 'Chuba Okadigbo',
+    role: 'COO',
+    image: { src: imageChuOkadigbo },
+    url: 'https://www.linkedin.com/in/chinedu-okadigbo-361198121/',
   },
+  {
+    name: "Tim O'Brien",
+    role: 'CSO',
+    image: { src: imageTimOBrien },
+    url: 'https://www.linkedin.com/in/t1mob',
+  },
+  {
+    name: 'Andrew Olowude',
+    role: 'CTO',
+    image: { src: imageAndrewOlowude },
+    url: 'https://www.linkedin.com/in/andrewolowude',
+  },
+  // {
+  //   name: 'Chelsea Hagon',
+  //   role: 'Senior Developer',
+  //   image: { src: imageChelseaHagon },
+  // },
+  // {
+  //   name: 'Emma Dorsey',
+  //   role: 'Senior Designer',
+  //   image: { src: imageEmmaDorsey },
+  // },
+  // {
+  //   name: 'Leonard Krasner',
+  //   role: 'VP, User Experience',
+  //   image: { src: imageLeonardKrasner },
+  // },
+  // {
+  //   name: 'Blake Reid',
+  //   role: 'Junior Copywriter',
+  //   image: { src: imageBlakeReid },
+  // },
+  // {
+  //   name: 'Kathryn Murphy',
+  //   role: 'VP, Human Resources',
+  //   image: { src: imageKathrynMurphy },
+  // },
+  // {
+  //   name: 'Whitney Francis',
+  //   role: 'Content Specialist',
+  //   image: { src: imageWhitneyFrancis },
+  // },
+  // {
+  //   name: 'Jeffrey Webb',
+  //   role: 'Account Coordinator',
+  //   image: { src: imageJeffreyWebb },
+  // },
+  // {
+  //   name: 'Benjamin Russel',
+  //   role: 'Senior Developer',
+  //   image: { src: imageBenjaminRussel },
+  // },
 ]
 
 function Team() {
   return (
     <Container className="mt-24 sm:mt-32 lg:mt-40">
       <div className="space-y-24">
-        {team.map((group) => (
-          <FadeInStagger key={group.title}>
-            <Border as={FadeIn} />
-            <div className="grid grid-cols-1 gap-6 pt-12 sm:pt-16 lg:grid-cols-4 xl:gap-8">
-              <FadeIn>
-                <h2 className="font-display text-2xl font-semibold text-neutral-950">
-                  {group.title}
-                </h2>
-              </FadeIn>
-              <div className="lg:col-span-3">
-                <ul
-                  role="list"
-                  className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:gap-8"
-                >
-                  {group.people.map((person) => (
-                    <li key={person.name}>
-                      <FadeIn>
+        <FadeInStagger>
+          <Border as={FadeIn} />
+          <div className="grid grid-cols-1 gap-6 pt-12 sm:pt-16 lg:grid-cols-1 xl:gap-8">
+            <FadeIn>
+              <h2 className="font-display text-2xl font-semibold text-neutral-950">
+                Team
+              </h2>
+            </FadeIn>
+            <div className="lg:col-span-3">
+              <ul
+                role="list"
+                className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-8"
+              >
+                {team.map((person) => (
+                  <li key={person.name.replaceAll(' ', '')}>
+                    <FadeIn>
+                      <Link href={person.url} target="_blank">
                         <div className="group relative overflow-hidden rounded-3xl bg-neutral-100">
                           <Image
                             alt=""
                             {...person.image}
-                            className="h-96 w-full object-cover grayscale transition duration-500 motion-safe:group-hover:scale-105"
+                            // height={100}
+                            // width={100}
+                            className=" w-full object-cover grayscale transition duration-500 motion-safe:group-hover:scale-105"
                           />
                           <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black to-black/0 to-40% p-6">
                             <p className="font-display text-base/6 font-semibold tracking-wide text-white">
@@ -165,14 +168,14 @@ function Team() {
                             </p>
                           </div>
                         </div>
-                      </FadeIn>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+                      </Link>
+                    </FadeIn>
+                  </li>
+                ))}
+              </ul>
             </div>
-          </FadeInStagger>
-        ))}
+          </div>
+        </FadeInStagger>
       </div>
     </Container>
   )
