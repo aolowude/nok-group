@@ -23,7 +23,7 @@ import imageLeslieAlexander from '@/images/team/leslie-alexander.jpg'
 import imageMichaelFoster from '@/images/team/michael-foster.jpg'
 import imageWhitneyFrancis from '@/images/team/whitney-francis.jpg'
 //NokImages
-import imageGregCussell from '@/data/images/team/gregCussell.jpg'
+import imageGregCussell from '@/data/images/team/gregCussell.jpeg'
 import imageChuOkadigbo from '@/data/images/team/chineduOkadigbo.jpeg'
 import imageTimOBrien from '@/data/images/team/timOBrien.jpeg'
 import imageAndrewOlowude from '@/data/images/team/andrewOlowude.jpeg'
