@@ -248,7 +248,7 @@ export const metadata: Metadata = {
 export default function Process() {
   return (
     <>
-      <PageIntro eyebrow="Our process" title="How we work">
+      <PageIntro eyebrow="Our Process" title="How we work">
         <p>
           We believe in efficiency and maximizing our resources to provide the
           best value to our clients. The primary way we do that is by re-using

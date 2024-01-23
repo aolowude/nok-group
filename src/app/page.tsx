@@ -185,8 +185,8 @@ export default async function Home() {
             Revolutionary systems tailored to the African market.
           </h1>
           <p className="mt-6 text-xl text-neutral-600">
-            Bridging the gaps between Traditional Technology, Blockchain and
-            Artificial Intelligence
+            Bridging the technology gaps using Artificial Intelligence, Web3.0
+            and more
           </p>
         </FadeIn>
       </Container>

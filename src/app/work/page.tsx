@@ -20,6 +20,12 @@ import logoPhobia from '@/images/clients/phobia/logo-dark.svg'
 import logoUnseal from '@/images/clients/unseal/logo-dark.svg'
 import { formatDate } from '@/lib/formatDate'
 import { type CaseStudy, type MDXEntry, loadCaseStudies } from '@/lib/mdx'
+import {
+  Icon_NokAcademy,
+  Icon_NokMedia,
+  Icon_NokPay,
+  Icon_NokTech,
+} from '../../components/Icons'
 
 function CaseStudies({
   caseStudies,
@@ -148,13 +154,12 @@ export default async function Work() {
   return (
     <>
       <PageIntro
-        eyebrow="Our work"
-        title="Proven solutions for real-world problems."
+        eyebrow="Our Work"
+        title="Real research for real-world problems."
       >
         <p>
-          We believe in efficiency and maximizing our resources to provide the
-          best value to our clients. By using best in class technologies we are
-          able deliver world class results.
+          We believe in efficiency and maximizing our resources while leveraging
+          best in class technologies to deliver world class products.
         </p>
       </PageIntro>
 
@@ -164,8 +169,8 @@ export default async function Work() {
         className="mt-24 sm:mt-32 lg:mt-40"
         client={{ name: 'Mail Smirk', logo: logoMailSmirk }}
       >
-        We approached <em>Studio</em> because we loved their past work. They
-        delivered something remarkably similar in record time.
+        We developed <em>Nok</em> because there is a real need for safer,
+        simpler financial accessibility.
       </Testimonial>
 
       <Clients />

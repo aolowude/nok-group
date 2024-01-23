@@ -34,7 +34,7 @@ import Link from 'next/link'
 function Culture() {
   return (
     <div className="mt-24 rounded-4xl bg-neutral-950 py-24 sm:mt-32 lg:mt-40 lg:py-32">
-      <SectionIntro eyebrow="Our culture" title="Bank the Unbanked" invert>
+      <SectionIntro eyebrow="Our Goal" title="Bank the Unbanked" invert>
         <p>
           We are a group of like-minded people who share the same core values
           and goals.
@@ -188,19 +188,19 @@ export default async function About() {
   return (
     <>
       <PageIntro
-        eyebrow="About us"
+        eyebrow="About Us"
         title="Our strength is in our extensive expertise and vision"
       >
         <p>Nok was started to simplify banking for all.</p>
         <p>
-          We are leveraging blockchain and ai to make banking more accessible.
+          We are leveraging A.i. to make banking more accessible and secure.
         </p>
         <div className="mt-10 max-w-2xl space-y-6 text-base"></div>
       </PageIntro>
       <Container className="mt-16">
         <StatList>
           <StatListItem value="35" label="partners" />
-          <StatListItem value="52" label="currencies" />
+          <StatListItem value="3" label="subsidiaries" />
           <StatListItem value="$750K+" label="raised" />
         </StatList>
       </Container>
