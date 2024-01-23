@@ -71,7 +71,7 @@ function CaseStudies({
   return (
     <>
       <SectionIntro
-        title="Simplifying banking with technology"
+        title="Simplifying banking and education with technology"
         className="mt-24 sm:mt-32 lg:mt-40"
       >
         <p>
@@ -129,13 +129,13 @@ function Services() {
   return (
     <>
       <SectionIntro
-        eyebrow="Services"
-        title="We help you identify, explore and respond to new opportunities."
+        eyebrow="Ecosystem"
+        title="Nok"
         className="mt-24 sm:mt-32 lg:mt-40"
       >
         <p>
-          As long as those opportunities involve giving us money to re-purpose
-          old projects — we can come up with an endless number of those.
+          Each pillar of Nok serves to complement all and fosters collaboration
+          and tech adoption.
         </p>
       </SectionIntro>
       <Container className="mt-16">
@@ -180,13 +180,13 @@ export default async function Home() {
   return (
     <>
       <Container className="mt-24 sm:mt-32 md:mt-56">
-        <FadeIn className="max-w-3xl">
+        <FadeIn className="max-w-4xl">
           <h1 className="font-display text-5xl font-medium tracking-tight text-neutral-950 [text-wrap:balance] sm:text-7xl">
-            Revolutionary financial system for the African market.
+            Revolutionary systems tailored to the African market.
           </h1>
           <p className="mt-6 text-xl text-neutral-600">
-            Bridging the gap between traditional fiat currency and decentralised
-            finance.
+            Bridging the gaps between Traditional Technology, Blockchain and
+            Artificial Intelligence
           </p>
         </FadeIn>
       </Container>

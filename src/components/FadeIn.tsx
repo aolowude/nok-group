@@ -21,7 +21,7 @@ export function FadeIn(
         hidden: { opacity: 0, y: shouldReduceMotion ? 0 : 42 },
         visible: { opacity: 1, y: 0 },
       }}
-      transition={{ duration: 1.5 }}
+      transition={{ duration: 1 }}
       {...(isInStaggerGroup
         ? {}
         : {
