@@ -15,13 +15,13 @@ export function FadeIn(
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: shouldReduceMotion ? 0 : 24 }}
+      initial="hidden"
+      whileInView="visible"
       variants={{
-        hidden: { opacity: 0, y: shouldReduceMotion ? 0 : 24 },
+        hidden: { opacity: 0, y: shouldReduceMotion ? 0 : 42 },
         visible: { opacity: 1, y: 0 },
       }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 5 }}
+      transition={{ duration: 1.5 }}
       {...(isInStaggerGroup
         ? {}
         : {
