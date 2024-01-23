@@ -144,10 +144,10 @@ function Navigation() {
     <nav className="mt-px font-display text-5xl font-medium tracking-tight text-white">
       <NavigationRow>
         <NavigationItem href="/about">About Us</NavigationItem>
-        <NavigationItem href="/process">Our Companies</NavigationItem>
+        <NavigationItem href="/work">Our Companies</NavigationItem>
       </NavigationRow>
       <NavigationRow>
-        <NavigationItem href="/work">Technology & Network</NavigationItem>
+        <NavigationItem href="/process">Technology & Network</NavigationItem>
         <NavigationItem href="/blog">More Information</NavigationItem>
       </NavigationRow>
     </nav>
