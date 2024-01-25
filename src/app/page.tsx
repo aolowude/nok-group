@@ -7,7 +7,7 @@ import { Container } from '@/components/Container'
 import { FadeIn, FadeInStagger } from '@/components/FadeIn'
 import { List, ListItem } from '@/components/List'
 import { SectionIntro } from '@/components/SectionIntro'
-import { StylizedImage } from '@/components/StylizedImage'
+import { StylizedImage, StylizedImageContain } from '@/components/StylizedImage'
 import { Testimonial } from '@/components/Testimonial'
 import logoBrightPath from '@/images/clients/bright-path/logo-light.svg'
 import logoFamilyFund from '@/images/clients/family-fund/logo-light.svg'
@@ -183,16 +183,25 @@ export default async function Home() {
 
   return (
     <>
-      <Container className="mt-24 sm:mt-32 md:mt-56">
-        <FadeInStagger>
-          <FadeIn className="max-w-4xl">
-            <h1 className="font-display text-5xl font-medium tracking-tight text-neutral-950 [text-wrap:balance] sm:text-7xl">
-              Revolutionary systems tailored to the African market.
-            </h1>
-            <p className="mt-6 text-xl text-neutral-600">
-              Bridging the technology gaps using Artificial Intelligence, Web3.0
-              and more
-            </p>
+      <Container className="mt-24">
+        <FadeInStagger className="flex">
+          <div className="mt-10 lg:mt-16 lg:w-2/3">
+            <FadeIn className="">
+              <h1 className="font-display text-2xl font-medium tracking-tight text-neutral-950 [text-wrap:balance] sm:text-7xl">
+                Revolutionary systems tailored to the African market.
+              </h1>
+              <p className="mt-10 text-xl text-neutral-600">
+                Bridging the technology gaps using Artificial Intelligence,
+                Web3.0 and more
+              </p>
+            </FadeIn>
+          </div>
+          <FadeIn className=" lg:w-1/3">
+            <StylizedImageContain
+              src={africaMapNok}
+              sizes="41rem, 31rem"
+              className="justify-center lg:justify-end"
+            />
           </FadeIn>
         </FadeInStagger>
       </Container>
