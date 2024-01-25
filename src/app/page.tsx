@@ -19,6 +19,8 @@ import logoPhobiaDark from '@/images/clients/phobia/logo-dark.svg'
 import logoPhobiaLight from '@/images/clients/phobia/logo-light.svg'
 import logoUnseal from '@/images/clients/unseal/logo-light.svg'
 import imageLaptop from '@/images/laptop.jpg'
+import africaMapNok from '@/images/icons/africaMapNok.svg'
+
 import { type CaseStudy, type MDXEntry, loadCaseStudies } from '@/lib/mdx'
 import NokIcons from '@/components/NokIcons'
 import NokAcademy from '../data/NokAcademy'
@@ -139,31 +141,33 @@ function Services() {
         </p>
       </SectionIntro>
       <Container className="mt-16">
-        <div className="lg:flex lg:items-center lg:justify-end">
-          <div className="flex justify-center lg:w-1/2 lg:justify-end lg:pr-12">
-            <FadeIn className="w-[33.75rem] flex-none lg:w-[45rem]">
-              <StylizedImage
-                src={imageLaptop}
-                sizes="(min-width: 1024px) 41rem, 31rem"
-                className="justify-center lg:justify-end"
-              />
-            </FadeIn>
+        <FadeInStagger>
+          <div className="lg:flex lg:items-center lg:justify-end">
+            <div className="flex justify-center lg:w-1/2 lg:justify-end lg:pr-12">
+              <FadeIn className="w-[33.75rem] flex-none lg:w-[45rem]">
+                <StylizedImage
+                  src={africaMapNok}
+                  sizes="(min-width: 1024px) 41rem, 31rem"
+                  className="justify-center lg:justify-end"
+                />
+              </FadeIn>
+            </div>
+            <List className="mt-16 lg:mt-0 lg:w-1/2 lg:min-w-[40rem] lg:pl-4">
+              <ListItem title="NokTech ($NOK)" color="green">
+                {`We possess ownership over cutting-edge technology, smart contracts, and the distribution of the world's pioneering decentralized stabilized basket token. Crafted by leading experts in tokenomics and blockchain technology, NokTech ($NOK) spearheads the advancement of innovative financial instruments.`}
+              </ListItem>
+              <ListItem title="NokPay" color="black">
+                {`NokPay presents a comprehensive retail and B2B banking platform empowered by fully owned proprietary technology. Our robust infrastructure integrates multiple banking licenses, KYC/AML compliance, On/Off Ramp facilities, multi-jurisdictional account opening, digital asset wallet creation, P2P payments, staking, yielding, rewards programs, and card issuing capabilities. We've augmented this platform with custom-built Artificial Intelligence and Blockchain technology for enhanced efficiency and security.`}
+              </ListItem>
+              <ListItem title="NokMedia" color="indigo">
+                {`We hold exclusive rights to establish and operate co-branded digital, radio, and TV media publications in collaboration with global media owners. These partnerships enable us to distribute content across Africa, leveraging full marketing expertise to effectively launch, expand, and strengthen our product portfolio.`}
+              </ListItem>
+              <ListItem title="NokAcademy" color="orange">
+                {`In partnership with AAASME and AU, NokAcademy is primed for a full-fledged launch. This initiative aims to identify, develop, and tokenize African-based businesses. NokAcademy stands as an owned and operated portfolio business unit committed to fostering business growth and innovation.`}
+              </ListItem>
+            </List>
           </div>
-          <List className="mt-16 lg:mt-0 lg:w-1/2 lg:min-w-[40rem] lg:pl-4">
-            <ListItem title="NokTech ($NOK)" color="green">
-              {`We possess ownership over cutting-edge technology, smart contracts, and the distribution of the world's pioneering decentralized stabilized basket token. Crafted by leading experts in tokenomics and blockchain technology, NokTech ($NOK) spearheads the advancement of innovative financial instruments.`}
-            </ListItem>
-            <ListItem title="NokPay" color="black">
-              {`NokPay presents a comprehensive retail and B2B banking platform empowered by fully owned proprietary technology. Our robust infrastructure integrates multiple banking licenses, KYC/AML compliance, On/Off Ramp facilities, multi-jurisdictional account opening, digital asset wallet creation, P2P payments, staking, yielding, rewards programs, and card issuing capabilities. We've augmented this platform with custom-built Artificial Intelligence and Blockchain technology for enhanced efficiency and security.`}
-            </ListItem>
-            <ListItem title="NokMedia" color="indigo">
-              {`We hold exclusive rights to establish and operate co-branded digital, radio, and TV media publications in collaboration with global media owners. These partnerships enable us to distribute content across Africa, leveraging full marketing expertise to effectively launch, expand, and strengthen our product portfolio.`}
-            </ListItem>
-            <ListItem title="NokAcademy" color="orange">
-              {`In partnership with AAASME and AU, NokAcademy is primed for a full-fledged launch. This initiative aims to identify, develop, and tokenize African-based businesses. NokAcademy stands as an owned and operated portfolio business unit committed to fostering business growth and innovation.`}
-            </ListItem>
-          </List>
-        </div>
+        </FadeInStagger>
       </Container>
     </>
   )
@@ -180,17 +184,18 @@ export default async function Home() {
   return (
     <>
       <Container className="mt-24 sm:mt-32 md:mt-56">
-        <FadeIn className="max-w-4xl">
-          <h1 className="font-display text-5xl font-medium tracking-tight text-neutral-950 [text-wrap:balance] sm:text-7xl">
-            Revolutionary systems tailored to the African market.
-          </h1>
-          <p className="mt-6 text-xl text-neutral-600">
-            Bridging the technology gaps using Artificial Intelligence, Web3.0
-            and more
-          </p>
-        </FadeIn>
+        <FadeInStagger>
+          <FadeIn className="max-w-4xl">
+            <h1 className="font-display text-5xl font-medium tracking-tight text-neutral-950 [text-wrap:balance] sm:text-7xl">
+              Revolutionary systems tailored to the African market.
+            </h1>
+            <p className="mt-6 text-xl text-neutral-600">
+              Bridging the technology gaps using Artificial Intelligence, Web3.0
+              and more
+            </p>
+          </FadeIn>
+        </FadeInStagger>
       </Container>
-
       <Clients />
 
       {/* <Container className="mt-24 sm:mt-32 md:mt-56">
@@ -201,16 +206,17 @@ export default async function Home() {
 
       <CaseStudies caseStudies={caseStudies} />
 
-      <Testimonial
-        className="mt-24 sm:mt-32 lg:mt-40"
-        client={{ name: 'Phobia', logo: logoPhobiaDark }}
-      >
-        Here at the NokGroup our vision is of an all-inclusive ecosystem that
-        removes the divide between traditional fiat currency and the
-        decentralised financial economy, aiding in the digitalisation of the
-        African continent.
-      </Testimonial>
-
+      <FadeInStagger>
+        <Testimonial
+          className="mt-24 sm:mt-32 lg:mt-40"
+          client={{ name: 'Phobia', logo: logoPhobiaDark }}
+        >
+          Here at the NokGroup our vision is of an all-inclusive ecosystem that
+          removes the divide between traditional fiat currency and the
+          decentralised financial economy, aiding in the digitalisation of the
+          African continent.
+        </Testimonial>
+      </FadeInStagger>
       <Services />
 
       <ContactSection />
