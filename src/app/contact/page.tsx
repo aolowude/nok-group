@@ -112,7 +112,7 @@ function ContactDetails() {
         <dl className="mt-6 grid grid-cols-1 gap-8 text-sm sm:grid-cols-2">
           {[
             ['Nok', 'nok@nokgroup.africa'],
-            ['Phone', '+44 792 337 8995'],
+            // ['Phone', '+44 792 337 8995'],
           ].map(([label, email]) => (
             <div key={email}>
               <dt className="font-semibold text-neutral-950">{label}</dt>

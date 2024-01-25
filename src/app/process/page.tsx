@@ -105,15 +105,30 @@ function NokPay() {
             <span
               key={index}
               style={{ color: accentColor }}
-              className="mb-2 mr-2 inline-block rounded-full border border-[#363D46]/50 bg-gray-950 
+              className={`mb-2 mr-2 inline-block rounded-full border border-[#363D46]/50 bg-gray-950
                   px-[10px] pb-[1px]
-                  pt-[2px] text-sm font-medium leading-6"
+                  pt-[2px] text-sm font-medium leading-6`}
             >
               {tag}
             </span>
           ))}
         </div>
       )}
+      {/* {tags && (
+        <div className="mx-auto mt-[25px] xl:ml-0 xl:max-w-full">
+          {tags.map((tag, index) => (
+            <span
+              key={index}
+              style={{ color: '#fff' }}
+              className={` bg-[#03EFE3}] mb-2 mr-2 inline-block rounded-full border border-[#363D46]/50 bg-[${accentColor}]
+                  px-[10px] pb-[1px]
+                  pt-[2px] text-sm font-medium leading-6 text-white`}
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
+      )} */}
       {/* <TagList className="mt-4">
         <TagListItem>In-depth questionnaires</TagListItem>
         <TagListItem>Feasibility studies</TagListItem>
@@ -157,15 +172,30 @@ function NokAcademy() {
       <h3 className="mt-12 font-display text-base font-semibold text-neutral-950">
         Features
       </h3>
-      {tags && (
+      {/* {tags && (
         <div className="mx-auto mt-[25px] xl:ml-0 xl:max-w-full">
           {tags.map((tag, index) => (
             <span
               key={index}
               style={{ color: accentColor }}
-              className="mb-2 mr-2 inline-block rounded-full border border-[#363D46]/50 bg-gray-50 
+              className={`mb-2 mr-2 inline-block rounded-full border border-[#363D46]/50 bg-gray-50
                   px-[10px] pb-[1px]
-                  pt-[2px] text-sm font-medium leading-6"
+                  pt-[2px] text-sm font-medium leading-6`}
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
+      )} */}
+      {tags && (
+        <div className="mx-auto mt-[25px] xl:ml-0 xl:max-w-full">
+          {tags.map((tag, index) => (
+            <span
+              key={index}
+              style={{ color: '#fff' }}
+              className={` mb-2 mr-2 inline-block rounded-full border border-[#363D46]/50 bg-[#5B40FF] bg-[${accentColor}]
+                  px-[10px] pb-[1px]
+                  pt-[2px] text-sm font-medium leading-6 text-white`}
             >
               {tag}
             </span>
@@ -212,15 +242,30 @@ function NokMedia() {
             <span
               key={index}
               style={{ color: accentColor }}
-              className="mb-2 mr-2 inline-block rounded-full border border-[#363D46]/50 bg-gray-950 
+              className={`mb-2 mr-2 inline-block rounded-full border border-[#363D46]/50 bg-gray-950
                   px-[10px] pb-[1px]
-                  pt-[2px] text-sm leading-6"
+                  pt-[2px] text-sm font-medium leading-6`}
             >
               {tag}
             </span>
           ))}
         </div>
       )}
+      {/* {tags && (
+        <div className="mx-auto mt-[25px] xl:ml-0 xl:max-w-full">
+          {tags.map((tag, index) => (
+            <span
+              key={index}
+              style={{ color: '#fff' }}
+              className={` bg-[#03EFE3}] mb-2 mr-2 inline-block rounded-full border border-[#363D46]/50 bg-[#CCFF82]
+                  px-[10px] pb-[1px]
+                  pt-[2px] text-sm font-medium leading-6 text-white`}
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
+      )} */}
     </Section>
   )
 }
@@ -253,15 +298,30 @@ function NokTech() {
       <h3 className="mt-12 font-display text-base font-semibold text-neutral-950">
         Features
       </h3>
-      {tags && (
+      {/* {tags && (
         <div className="mx-auto mt-[25px] xl:ml-0 xl:max-w-full">
           {tags.map((tag, index) => (
             <span
               key={index}
               style={{ color: accentColor }}
-              className="mb-2 mr-2 inline-block rounded-full border border-[#363D46]/50 bg-gray-50
+              className={`mb-2 mr-2 inline-block rounded-full border border-[#363D46]/50 bg-gray-50
                   px-[10px] pb-[1px]
-                  pt-[2px] text-sm font-medium leading-6"
+                  pt-[2px] text-sm font-medium leading-6`}
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
+      )} */}
+      {tags && (
+        <div className="mx-auto mt-[25px] xl:ml-0 xl:max-w-full">
+          {tags.map((tag, index) => (
+            <span
+              key={index}
+              style={{ color: '#fff' }}
+              className={` mb-2 mr-2 inline-block rounded-full border border-[#363D46]/50 bg-[#5B40FF] bg-[${accentColor}]
+                  px-[10px] pb-[1px]
+                  pt-[2px] text-sm font-medium leading-6 text-white`}
             >
               {tag}
             </span>
