@@ -1,4 +1,5 @@
 import { type Metadata } from 'next'
+import Image from 'next/image'
 
 import { Blockquote } from '@/components/Blockquote'
 import { ContactSection } from '@/components/ContactSection'
@@ -15,14 +16,21 @@ import imageLaptop from '@/images/laptop.jpg'
 import imageMeeting from '@/images/meeting.jpg'
 import imageWhiteboard from '@/images/whiteboard.jpg'
 
+import nokPayLogo from '@/images/logos/mark/nokPay.svg'
+import nokAcademyLogo from '@/images/logos/mark/nokAcademy.svg'
+import nokMediaLogo from '@/images/logos/mark/nokMedia.svg'
+import nokTechLogo from '@/images/logos/mark/nokTech.svg'
+
 function Section({
   title,
   image,
   children,
+  logo,
 }: {
   title: string
   image: React.ComponentPropsWithoutRef<typeof StylizedImage>
   children: React.ReactNode
+  logo?: any
 }) {
   return (
     <Container className="group/section [counter-increment:section]">
@@ -38,10 +46,19 @@ function Section({
         </div>
         <div className="mt-12 lg:mt-0 lg:w-[37rem] lg:flex-none lg:group-even/section:order-first">
           <FadeIn>
-            <div
+            {/* <div
               className="font-display text-base font-semibold before:text-neutral-300 before:content-['/_'] after:text-neutral-950 after:content-[counter(section,decimal-leading-zero)]"
               aria-hidden="true"
-            />
+            /> */}
+
+            {logo && (
+              <Image
+                src={logo}
+                alt="Nok Pay Logo"
+                className="h-16 w-16 flex-none"
+                unoptimized
+              />
+            )}
             <h2 className="mt-2 font-display text-3xl font-medium tracking-tight text-neutral-950 sm:text-4xl">
               {title}
             </h2>
@@ -65,7 +82,7 @@ function NokPay() {
   const accentColor = '#03EFE3'
 
   return (
-    <Section title="NokPay" image={{ src: imageWhiteboard }}>
+    <Section title="NokPay" image={{ src: imageWhiteboard }} logo={nokPayLogo}>
       <div className="space-y-6 text-base text-neutral-600">
         <p>
           A state of the art{' '}
@@ -123,7 +140,11 @@ function NokAcademy() {
   const accentColor = '#F0AD66'
 
   return (
-    <Section title="NokAcademy" image={{ src: imageLaptop, shape: 1 }}>
+    <Section
+      title="NokAcademy"
+      image={{ src: imageLaptop, shape: 1 }}
+      logo={nokAcademyLogo}
+    >
       <div className="space-y-6 text-base text-neutral-600">
         <p>
           The incubation platform for African entrepreneurs, using blockchain
@@ -167,7 +188,11 @@ function NokMedia() {
   const accentColor = '#CCFF82'
 
   return (
-    <Section title="NokMedia" image={{ src: imageMeeting, shape: 2 }}>
+    <Section
+      title="NokMedia"
+      image={{ src: imageMeeting, shape: 2 }}
+      logo={nokMediaLogo}
+    >
       <div className="space-y-6 text-base text-neutral-600">
         <p>
           Creating a strong voice advocating for African economic opportunities,
@@ -210,7 +235,11 @@ function NokTech() {
   const accentColor = '#5B40FF'
 
   return (
-    <Section title="NokTech" image={{ src: imageLaptop, shape: 1 }}>
+    <Section
+      title="NokTech"
+      image={{ src: imageLaptop, shape: 1 }}
+      logo={nokTechLogo}
+    >
       <div className="space-y-6 text-base text-neutral-600">
         <p>
           The basis for the future of African crypto, the $NOK token, with a
