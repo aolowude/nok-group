@@ -34,7 +34,11 @@ import Link from 'next/link'
 function Culture() {
   return (
     <div className="mt-24 rounded-4xl bg-neutral-950 py-24 sm:mt-32 lg:mt-40 lg:py-32">
-      <SectionIntro eyebrow="Our Goal" title="Bank the Unbanked" invert>
+      <SectionIntro
+        eyebrow="Our Goal"
+        title="Customisable and accessible banking"
+        invert
+      >
         <p>
           We are a group of like-minded people who share the same core values
           and goals.
@@ -67,19 +71,19 @@ const team = [
   },
   {
     name: 'Chuba Okadigbo',
-    role: 'COO',
+    role: 'Co-Founder',
     image: { src: imageChuOkadigbo },
     url: 'https://www.linkedin.com/in/chinedu-okadigbo-361198121/',
   },
   {
     name: "Tim O'Brien",
-    role: 'CSO',
+    role: 'Co-Founder',
     image: { src: imageTimOBrien },
     url: 'https://www.linkedin.com/in/t1mob',
   },
   {
     name: 'Andrew Olowude',
-    role: 'CTO',
+    role: 'Co-Founder',
     image: { src: imageAndrewOlowude },
     url: 'https://www.linkedin.com/in/andrewolowude',
   },

@@ -43,22 +43,26 @@ const clients = [
 function Clients() {
   return (
     // <div className="max-w-8xl mx-auto mt-24 px-6 sm:mt-32 lg:mt-40 lg:px-8">
-    <div className="mt-24 rounded-4xl bg-black py-5 sm:mt-32 lg:mt-60">
+    <div className="mt-24 rounded-4xl bg-black py-5 sm:mt-32 lg:mt-40">
       <Container>
-        <div className="fade-x relative bg-black py-5 ">
-          <NokIcons name="header-icons" loop={true} />
-        </div>
-
-        <FadeIn className="flex items-center gap-x-8">
-          <h2 className="text-center font-display text-sm font-semibold tracking-wider text-white sm:text-left">
-            Our subsidiaries and partners
-          </h2>
-
-          <div className="h-px flex-auto bg-neutral-600" />
-        </FadeIn>
         <FadeInStagger faster>
-          <Swiper_loop />
+          <FadeIn>
+            <div className="fade-x relative bg-black py-5 ">
+              <NokIcons name="header-icons" loop={true} />
+            </div>
+          </FadeIn>
         </FadeInStagger>
+
+        <FadeIn>
+          <div className="flex items-center gap-x-8">
+            <h2 className="text-center font-display text-sm font-semibold tracking-wider text-white sm:text-left">
+              Our subsidiaries and partners
+            </h2>
+
+            <div className="h-px flex-auto bg-neutral-600" />
+          </div>
+          <Swiper_loop />
+        </FadeIn>
       </Container>
     </div>
     // </div>
@@ -183,11 +187,11 @@ export default async function Home() {
 
   return (
     <>
-      <Container className="mt-24">
-        <FadeInStagger className="flex">
+      <Container className="mt-10 lg:mt-20">
+        <FadeInStagger className="mt-10 flex">
           <div className="mt-10 lg:mt-16 lg:w-2/3">
-            <FadeIn className="">
-              <h1 className="font-display text-2xl font-medium tracking-tight text-neutral-950 [text-wrap:balance] sm:text-7xl">
+            <FadeIn className="mt-20">
+              <h1 className="font-display text-4xl font-medium tracking-tight text-neutral-950 [text-wrap:balance] sm:text-7xl">
                 Revolutionary systems tailored to the African market.
               </h1>
               <p className="mt-10 text-xl text-neutral-600">
@@ -196,7 +200,7 @@ export default async function Home() {
               </p>
             </FadeIn>
           </div>
-          <FadeIn className=" lg:w-1/3">
+          <FadeIn className=" lg:w-1/2">
             <StylizedImageContain
               src={africaMapNok}
               sizes="41rem, 31rem"
