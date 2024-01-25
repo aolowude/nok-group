@@ -23,10 +23,7 @@ import africaMapNok from '@/images/icons/africaMapNok.svg'
 
 import { type CaseStudy, type MDXEntry, loadCaseStudies } from '@/lib/mdx'
 import NokIcons from '@/components/NokIcons'
-import NokAcademy from '../data/NokAcademy'
-import NokMedia from '../data/NokMedia'
-import NokPay from '../data/NokPay'
-import NokTech from '../data/NokTech'
+
 import Swiper_loop from '../components/Swiper_loop'
 
 const clients = [
