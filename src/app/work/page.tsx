@@ -173,7 +173,7 @@ export default async function Work() {
         simpler financial accessibility.
       </Testimonial>
 
-      <Clients />
+      {/* <Clients /> */}
 
       <ContactSection />
     </>

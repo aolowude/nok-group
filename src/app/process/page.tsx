@@ -53,133 +53,192 @@ function Section({
   )
 }
 
-function Discover() {
+function NokPay() {
+  const tags = [
+    'Banking As A Service',
+    'Banking Licenses',
+    'KYC/AML',
+    'Card Issuing',
+    "Services Centre's",
+    'Core Branding',
+  ]
+  const accentColor = '#03EFE3'
+
   return (
-    <Section title="Discover" image={{ src: imageWhiteboard }}>
+    <Section title="NokPay" image={{ src: imageWhiteboard }}>
       <div className="space-y-6 text-base text-neutral-600">
         <p>
-          We work closely with our clients to understand their{' '}
-          <strong className="font-semibold text-neutral-950">needs</strong> and
-          goals, embedding ourselves in their every day operations to understand
-          what makes their business tick.
-        </p>
-        <p>
-          Our team of private investigators shadow the company director’s for
-          several weeks while our account managers focus on going through their
-          trash. Our senior security experts then perform social engineering
-          hacks to gain access to their{' '}
-          <strong className="font-semibold text-neutral-950">business</strong>{' '}
-          accounts — handing that information over to our forensic accounting
-          team.
-        </p>
-        <p>
-          Once the full audit is complete, we report back with a comprehensive{' '}
-          <strong className="font-semibold text-neutral-950">plan</strong> and,
-          more importantly, a budget.
+          A state of the art{' '}
+          <strong className="font-semibold text-neutral-950">
+            A.I. powered customisable banking platform
+          </strong>{' '}
+          covering regulated fiat, crypto and card transaction services. Using
+          exciting marketing and branding to create a strong
+          Banking-as-a-Service identity. Spanning the gap between fiat and
+          crypto in a regulated, trustworthy environment.
         </p>
       </div>
 
       <h3 className="mt-12 font-display text-base font-semibold text-neutral-950">
-        Included in this phase
+        Features
       </h3>
-      <TagList className="mt-4">
+      {tags && (
+        <div className="mx-auto mt-[25px] xl:ml-0 xl:max-w-full">
+          {tags.map((tag, index) => (
+            <span
+              key={index}
+              style={{ color: accentColor }}
+              className="mb-2 mr-2 inline-block rounded-full border border-[#363D46]/50 bg-gray-950 
+                  px-[10px] pb-[1px]
+                  pt-[2px] text-sm font-medium leading-6"
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
+      )}
+      {/* <TagList className="mt-4">
         <TagListItem>In-depth questionnaires</TagListItem>
         <TagListItem>Feasibility studies</TagListItem>
         <TagListItem>Blood samples</TagListItem>
         <TagListItem>Employee surveys</TagListItem>
         <TagListItem>Proofs-of-concept</TagListItem>
         <TagListItem>Forensic audit</TagListItem>
-      </TagList>
+      </TagList> */}
     </Section>
   )
 }
 
-function Build() {
+function NokAcademy() {
+  const tags = [
+    'Incubation',
+    'Acceleration ',
+    'Launchpad',
+    'ICO to IPO',
+    'Network Integration',
+    'Community',
+    'Minting through XSM',
+    ' Tokenisation',
+  ]
+  const accentColor = '#F0AD66'
+
   return (
-    <Section title="Build" image={{ src: imageLaptop, shape: 1 }}>
+    <Section title="NokAcademy" image={{ src: imageLaptop, shape: 1 }}>
       <div className="space-y-6 text-base text-neutral-600">
         <p>
-          Based off of the discovery phase, we develop a comprehensive roadmap
-          for each product and start working towards delivery. The roadmap is an
-          intricately tangled mess of technical nonsense designed to drag the
-          project out as long as possible.
-        </p>
-        <p>
-          Each client is assigned a key account manager to keep lines of
-          communication open and obscure the actual progress of the project.
-          They act as a buffer between the client’s incessant nagging and the
-          development team who are hard at work scouring open source projects
-          for code to re-purpose.
-        </p>
-        <p>
-          Our account managers are trained to only reply to client emails after
-          9pm, several days after the initial email. This reinforces the general
-          aura that we are very busy and dissuades clients from asking for
-          changes.
+          The incubation platform for African entrepreneurs, using blockchain
+          technology and communities to access global funds. 3-month program
+          leading to an enterprise accelerator, growing African wealth and
+          development. Close links to share exchanges to provide a path from ICO
+          to IPO.
         </p>
       </div>
-
-      <Blockquote
-        author={{ name: 'Debra Fiscal', role: 'CEO of Unseal' }}
-        className="mt-12"
-      >
-        Studio were so regular with their progress updates we almost began to
-        think they were automated!
-      </Blockquote>
+      <h3 className="mt-12 font-display text-base font-semibold text-neutral-950">
+        Features
+      </h3>
+      {tags && (
+        <div className="mx-auto mt-[25px] xl:ml-0 xl:max-w-full">
+          {tags.map((tag, index) => (
+            <span
+              key={index}
+              style={{ color: accentColor }}
+              className="mb-2 mr-2 inline-block rounded-full border border-[#363D46]/50 bg-gray-50 
+                  px-[10px] pb-[1px]
+                  pt-[2px] text-sm font-medium leading-6"
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
+      )}
     </Section>
   )
 }
 
-function Deliver() {
+function NokMedia() {
+  const tags = [
+    'User Acquisition',
+    'Publisher Relations',
+    'African Communications Union',
+    'Media & Production',
+    'Distribution',
+    'Content Creation',
+  ]
+  const accentColor = '#CCFF82'
+
   return (
-    <Section title="Deliver" image={{ src: imageMeeting, shape: 2 }}>
+    <Section title="NokMedia" image={{ src: imageMeeting, shape: 2 }}>
       <div className="space-y-6 text-base text-neutral-600">
         <p>
-          About halfway through the Build phase, we push each project out by 6
-          weeks due to a change in{' '}
-          <strong className="font-semibold text-neutral-950">
-            requirements
-          </strong>
-          . This allows us to increase the budget a final time before launch.
-        </p>
-        <p>
-          Despite largely using pre-built components, most of the{' '}
-          <strong className="font-semibold text-neutral-950">progress</strong>{' '}
-          on each project takes place in the final 24 hours. The development
-          time allocated to each client is actually spent making augmented
-          reality demos that go viral on Twitter.
-        </p>
-        <p>
-          We ensure that the main pages of the site are{' '}
-          <strong className="font-semibold text-neutral-950">
-            fully functional
-          </strong>{' '}
-          at launch — the auxiliary pages will, of course, be lorem ipusm shells
-          which get updated as part of our exorbitant{' '}
-          <strong className="font-semibold text-neutral-950">
-            maintenance
-          </strong>{' '}
-          retainer.
+          Creating a strong voice advocating for African economic opportunities,
+          promoting our community of investors and changing investor
+          perceptions. Building a pan-African identity and entrepreneur
+          ecosystem and leveraging creators and influencers to promote the
+          NokGroup brand.
         </p>
       </div>
 
       <h3 className="mt-12 font-display text-base font-semibold text-neutral-950">
-        Included in this phase
+        Features
       </h3>
-      <List className="mt-8">
-        <ListItem title="Testing">
-          Our projects always have 100% test coverage, which would be impressive
-          if our tests weren’t as porous as a sieve.
-        </ListItem>
-        <ListItem title="Infrastructure">
-          To ensure reliability we only use the best Digital Ocean droplets that
-          $4 a month can buy.
-        </ListItem>
-        <ListItem title="Support">
-          Because we hold the API keys for every critical service your business
-          uses, you can expect a lifetime of support, and invoices, from us.
-        </ListItem>
-      </List>
+      {tags && (
+        <div className="mx-auto mt-[25px] xl:ml-0 xl:max-w-full">
+          {tags.map((tag, index) => (
+            <span
+              key={index}
+              style={{ color: accentColor }}
+              className="mb-2 mr-2 inline-block rounded-full border border-[#363D46]/50 bg-gray-950 
+                  px-[10px] pb-[1px]
+                  pt-[2px] text-sm leading-6"
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
+      )}
+    </Section>
+  )
+}
+
+function NokTech() {
+  const tags = [
+    '$NOK Token',
+    'Full Tech IP of NokPay',
+    'NFT Exchange',
+    'Crypto Exchange Wallet',
+  ]
+  const accentColor = '#5B40FF'
+
+  return (
+    <Section title="NokTech" image={{ src: imageLaptop, shape: 1 }}>
+      <div className="space-y-6 text-base text-neutral-600">
+        <p>
+          The basis for the future of African crypto, the $NOK token, with a
+          bespoke wallet and rewards programme. An NFT platform using proven
+          technology allowing entrepreneurs and artists to realise their true
+          potential. The African development consultancy and agency for the
+          NokGroup, building end-to-end platforms and blockchain solutions for
+          African consumers.
+        </p>
+      </div>
+      <h3 className="mt-12 font-display text-base font-semibold text-neutral-950">
+        Features
+      </h3>
+      {tags && (
+        <div className="mx-auto mt-[25px] xl:ml-0 xl:max-w-full">
+          {tags.map((tag, index) => (
+            <span
+              key={index}
+              style={{ color: accentColor }}
+              className="mb-2 mr-2 inline-block rounded-full border border-[#363D46]/50 bg-gray-50
+                  px-[10px] pb-[1px]
+                  pt-[2px] text-sm font-medium leading-6"
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
+      )}
     </Section>
   )
 }
@@ -195,14 +254,12 @@ function Values() {
       </div>
 
       <SectionIntro
-        eyebrow="Our values"
-        title="Balancing reliability and innovation"
+        eyebrow="Technology"
+        title="State of the Art utilisation of A.I., LLMs and Blockchain"
       >
         <p>
           We strive to stay at the forefront of emerging trends and
-          technologies, while completely ignoring them and forking that old
-          Rails project we feel comfortable using. We stand by our core values
-          to justify that decision.
+          technologies, while focusing on providing seamless experiences
         </p>
       </SectionIntro>
 
@@ -240,7 +297,7 @@ function Values() {
 }
 
 export const metadata: Metadata = {
-  title: 'Our Process',
+  title: 'Our Products',
   description:
     'We believe in efficiency and maximizing our resources to provide the best value to our clients.',
 }
@@ -248,18 +305,18 @@ export const metadata: Metadata = {
 export default function Process() {
   return (
     <>
-      <PageIntro eyebrow="Our Process" title="How we work">
+      <PageIntro eyebrow="Our Products" title="Nok Ecosystem">
         <p>
-          We believe in efficiency and maximizing our resources to provide the
-          best value to our clients. The primary way we do that is by re-using
-          the same five projects we’ve been developing for the past decade.
+          We have carefully curated our offerings to the African market with a
+          global mindset.
         </p>
       </PageIntro>
 
       <div className="mt-24 space-y-24 [counter-reset:section] sm:mt-32 sm:space-y-32 lg:mt-40 lg:space-y-40">
-        <Discover />
-        <Build />
-        <Deliver />
+        <NokPay />
+        <NokAcademy />
+        <NokMedia />
+        <NokTech />
       </div>
 
       <Values />
