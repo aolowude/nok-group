@@ -23,7 +23,7 @@ export function ContactSection() {
               </h3>
               <Offices
                 invert
-                className="mt-6 grid grid-cols-1 gap-8 sm:grid-cols-2"
+                className="mt-6 grid grid-cols-2 gap-8 sm:grid-cols-3"
               />
             </div>
           </div>

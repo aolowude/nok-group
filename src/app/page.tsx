@@ -20,6 +20,7 @@ import logoPhobiaLight from '@/images/clients/phobia/logo-light.svg'
 import logoUnseal from '@/images/clients/unseal/logo-light.svg'
 import imageLaptop from '@/images/laptop.jpg'
 import africaMapNok from '@/images/icons/africaMapNok.svg'
+import nokTech from '@/data/images/nokTech/nokTech.png'
 
 import { type CaseStudy, type MDXEntry, loadCaseStudies } from '@/lib/mdx'
 import NokIcons from '@/components/NokIcons'
@@ -87,7 +88,7 @@ function CaseStudies({
         <FadeInStagger className="grid grid-cols-1 gap-8 lg:grid-cols-3">
           {caseStudies.map((caseStudy) => (
             <FadeIn key={caseStudy.href} className="flex">
-              <article className="relative flex w-full flex-col rounded-3xl p-6 ring-1 ring-neutral-950/5 transition hover:bg-neutral-50 sm:p-8">
+              <article className="relative flex w-full flex-col rounded-3xl bg-gray-50 p-6 ring-1 ring-neutral-950/5 transition hover:bg-teal-50 sm:p-8">
                 <h3>
                   <Link href={caseStudy.href}>
                     <span className="absolute inset-0 rounded-3xl" />
@@ -175,7 +176,7 @@ function Services() {
 }
 
 export const metadata: Metadata = {
-  description: 'Revolutionising banking in Africa with  .',
+  description: 'Revolutionary Pan African transformative digital ecosystem.',
 }
 
 export default async function Home() {
@@ -185,9 +186,9 @@ export default async function Home() {
     <>
       <Container className="mt-10 lg:mt-20">
         <FadeInStagger className="mt-10 flex">
-          <div className="mt-10 lg:mt-16 lg:w-2/3">
-            <FadeIn className="mt-20">
-              <h1 className="font-display text-2xl font-medium tracking-tight text-neutral-950 [text-wrap:balance] sm:text-5xl">
+          <div className="mt-10 lg:mt-20 lg:w-2/3">
+            <FadeIn className="mt-10">
+              <h1 className="font-display text-3xl font-medium tracking-tight text-neutral-950 [text-wrap:balance] sm:text-5xl">
                 Revolutionary Pan African transformative digital ecosystem.
               </h1>
               <p
@@ -199,12 +200,13 @@ export default async function Home() {
               </p>
             </FadeIn>
           </div>
-          <FadeIn className=" lg:w-1/2">
-            <StylizedImageContain
-              src={africaMapNok}
+          <FadeIn className="hidden lg:block lg:w-1/2">
+            <Image src={nokTech} alt="NokTech" />
+            {/* <StylizedImageContain
+              src={nokTech}
               sizes="41rem, 31rem"
               className="justify-center lg:justify-end"
-            />
+            /> */}
           </FadeIn>
         </FadeInStagger>
       </Container>
@@ -229,7 +231,8 @@ export default async function Home() {
           African continent.
         </Testimonial>
       </FadeInStagger>
-      <Services />
+
+      {/* <Services /> */}
 
       <ContactSection />
     </>
