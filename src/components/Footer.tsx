@@ -7,18 +7,18 @@ import { socialMediaProfiles } from '@/components/SocialMedia'
 
 const navigation = [
   {
-    title: 'Work',
+    title: 'Technology',
     links: [
-      { title: 'NokMedia', href: '/work/nok-media' },
-      { title: 'Unseal', href: '/work/unseal' },
-      { title: 'Phobia', href: '/work/phobia' },
+      { title: 'NokPay', href: '/technology/nok-pay' },
+      { title: 'NokMedia', href: '/technology/nok-media' },
+      { title: 'NokAcademy', href: '/technology/nok-academy' },
       {
         title: (
           <>
             See all <span aria-hidden="true">&rarr;</span>
           </>
         ),
-        href: '/work',
+        href: '/technology',
       },
     ],
   },
@@ -26,7 +26,7 @@ const navigation = [
     title: 'Company',
     links: [
       { title: 'About', href: '/about' },
-      { title: 'Process', href: '/process' },
+      { title: 'Portfolio', href: '/portfolio' },
       { title: 'Blog', href: '/blog' },
       { title: 'Contact us', href: '/contact' },
     ],

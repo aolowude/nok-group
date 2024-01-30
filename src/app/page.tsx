@@ -164,7 +164,7 @@ function Services() {
                 {`We hold exclusive rights to establish and operate co-branded digital, radio, and TV media publications in collaboration with global media owners. These partnerships enable us to distribute content across Africa, leveraging full marketing expertise to effectively launch, expand, and strengthen our product portfolio.`}
               </ListItem>
               <ListItem title="NokAcademy" color="orange">
-                {`In partnership with AAASME and AU, NokAcademy is primed for a full-fledged launch. This initiative aims to identify, develop, and tokenize African-based businesses. NokAcademy stands as an owned and operated portfolio business unit committed to fostering business growth and innovation.`}
+                {`In partnership with Pan African Associations, NokAcademy is primed for a full-fledged launch. This initiative aims to identify, develop, and tokenize African-based businesses. NokAcademy stands as an owned and operated portfolio business unit committed to fostering business growth and innovation.`}
               </ListItem>
             </List>
           </div>
@@ -175,7 +175,7 @@ function Services() {
 }
 
 export const metadata: Metadata = {
-  description: 'Revolutionising banking in Africa with A.I.',
+  description: 'Revolutionising banking in Africa with  .',
 }
 
 export default async function Home() {
@@ -187,12 +187,15 @@ export default async function Home() {
         <FadeInStagger className="mt-10 flex">
           <div className="mt-10 lg:mt-16 lg:w-2/3">
             <FadeIn className="mt-20">
-              <h1 className="font-display text-4xl font-medium tracking-tight text-neutral-950 [text-wrap:balance] sm:text-7xl">
-                Revolutionary systems tailored to the African market.
+              <h1 className="font-display text-2xl font-medium tracking-tight text-neutral-950 [text-wrap:balance] sm:text-5xl">
+                Revolutionary Pan African transformative digital ecosystem.
               </h1>
-              <p className="mt-10 text-xl text-neutral-600">
+              <p
+                className="mt-6
+               text-xl text-neutral-600"
+              >
                 Bridging the technology gaps using Artificial Intelligence,
-                Web3.0 and more
+                Web3.0 and blockchain.
               </p>
             </FadeIn>
           </div>

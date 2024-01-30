@@ -33,16 +33,17 @@ export function Offices({
     <ul role="list" {...props}>
       <li>
         <Office name="Nigeria" invert={invert}>
-          Ikoyi
-          <br />
           Lagos, Nigeria
         </Office>
       </li>
       <li>
         <Office name="UK" invert={invert}>
-          Greater London
-          <br />
           London, United Kingdom
+        </Office>
+      </li>
+      <li>
+        <Office name="Mauritius" invert={invert}>
+          Mauritius
         </Office>
       </li>
     </ul>

@@ -87,7 +87,7 @@ function NokPay() {
         <p>
           A state of the art{' '}
           <strong className="font-semibold text-neutral-950">
-            A.I. powered customisable banking platform
+            AI powered customisable banking platform
           </strong>{' '}
           covering regulated fiat, crypto and card transaction services. Using
           exciting marketing and branding to create a strong
@@ -344,7 +344,7 @@ function Values() {
 
       <SectionIntro
         eyebrow="Technology"
-        title="State of the Art utilisation of A.I., LLMs and Blockchain"
+        title="State of the Art utilisation of AI, LLMs and Blockchain"
       >
         <p>
           We strive to stay at the forefront of emerging trends and

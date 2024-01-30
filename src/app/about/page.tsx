@@ -196,9 +196,7 @@ export default async function About() {
         title="Our strength is in our extensive expertise and vision"
       >
         <p>Nok was started to simplify banking for all.</p>
-        <p>
-          We are leveraging A.i. to make banking more accessible and secure.
-        </p>
+        <p>We are leveraging AI to make banking more accessible and secure.</p>
         <div className="mt-10 max-w-2xl space-y-6 text-base"></div>
       </PageIntro>
       <Container className="mt-16">
