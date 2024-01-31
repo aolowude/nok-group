@@ -12,9 +12,9 @@ export function Logomark({
   filled?: boolean
 }) {
   return invert ? (
-    <Image src={nokGroupMark} alt="NokLogo" width={50} height={50} />
+    <Image src={nokGroupMark} alt="NokLogo" width={50} />
   ) : (
-    <Image src={nokGroupMark} alt="NokLogo" width={50} height={50} />
+    <Image src={nokGroupMark} alt="NokLogo" width={50} />
   )
 }
 
@@ -30,8 +30,8 @@ export function Logo({
   fillOnHover?: boolean
 }) {
   return invert ? (
-    <Image src={nokLogoWhite} alt="NokLogo" width={200} height={50} />
+    <Image src={nokLogoWhite} alt="NokLogo" width={200} />
   ) : (
-    <Image src={nokLogoBlack} alt="NokLogo" width={200} height={50} />
+    <Image src={nokLogoBlack} alt="NokLogo" width={200} />
   )
 }

@@ -85,7 +85,7 @@ function CaseStudies({
             and multimedia delivery
           </p>
         </SectionIntro>
-        <Image src={africaMapNok} alt="Africa Map Nok" width={400} />
+        {/* <Image src={africaMapNok} alt="Africa Map Nok" width={400} /> */}
       </div>
       <Container className="mt-16">
         <FadeInStagger className="grid grid-cols-1 gap-8 lg:grid-cols-3">
