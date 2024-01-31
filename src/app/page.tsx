@@ -212,12 +212,6 @@ export default async function Home() {
       </Container>
       <Clients />
 
-      {/* <Container className="mt-24 sm:mt-32 md:mt-56">
-        <FadeIn className="max-w-3xl">
-          <NokPay />
-        </FadeIn>
-      </Container> */}
-
       <CaseStudies caseStudies={caseStudies} />
 
       <FadeInStagger>
