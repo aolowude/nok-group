@@ -21,7 +21,7 @@ import logoUnseal from '@/images/clients/unseal/logo-light.svg'
 import imageLaptop from '@/images/laptop.jpg'
 import africaMapNok from '@/images/icons/africaMapNok.svg'
 import nokTech from '@/data/images/nokTech/nokTech.png'
-
+import { Logomark } from '@/components/Logo'
 import { type CaseStudy, type MDXEntry, loadCaseStudies } from '@/lib/mdx'
 import NokIcons from '@/components/NokIcons'
 
@@ -38,21 +38,21 @@ const clients = [
   ['North Adventures', logoNorthAdventures],
 ]
 
-function Clients() {
+function Partners() {
   return (
     // <div className="max-w-8xl mx-auto mt-24 px-6 sm:mt-32 lg:mt-40 lg:px-8">
-    <div className="mt-24 rounded-4xl bg-black py-5 sm:mt-32 lg:mt-40">
+    <div className="containerPartners min-h-96 mt-24 rounded-4xl bg-black py-5 sm:mt-32 lg:mt-40">
       <Container>
         <FadeInStagger faster>
           <FadeIn>
-            <div className="fade-x relative bg-black py-5 ">
+            <div className="fade-x relative bg-black py-8 ">
               <NokIcons name="header-icons" loop={true} />
             </div>
           </FadeIn>
         </FadeInStagger>
 
         <FadeIn>
-          <div className="flex items-center gap-x-8">
+          <div className="flex items-center gap-x-8 py-2">
             <h2 className="text-center font-display text-sm font-semibold tracking-wider text-white sm:text-left">
               Our subsidiaries and partners
             </h2>
@@ -210,7 +210,7 @@ export default async function Home() {
           </FadeIn>
         </FadeInStagger>
       </Container>
-      <Clients />
+      <Partners />
 
       <CaseStudies caseStudies={caseStudies} />
 
@@ -223,6 +223,9 @@ export default async function Home() {
           removes the divide between traditional fiat currency and the
           decentralised financial economy, aiding in the digitalisation of the
           African continent.
+          <div className="align-center flex justify-center pt-10">
+            <Logomark />
+          </div>
         </Testimonial>
       </FadeInStagger>
 

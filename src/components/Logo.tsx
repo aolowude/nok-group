@@ -1,9 +1,7 @@
-import { useId } from 'react'
-import clsx from 'clsx'
 import Image from 'next/image'
-import imageLogo from '@/images/logoFull.png'
-import nokLogoWhite from '@/images/logoWhite.png'
-import nokLogoBlack from '@/images/logoBlack.png'
+import nokLogoWhite from '@/images/logos/logoWhite.png'
+import nokLogoBlack from '@/images/logos/logoBlack.png'
+import nokGroupMark from '@/images/logos/mark/nokGroup.svg'
 
 export function Logomark({
   invert = false,
@@ -13,12 +11,10 @@ export function Logomark({
   invert?: boolean
   filled?: boolean
 }) {
-  // let id = useId()
-
   return invert ? (
-    <Image src={nokLogoWhite} alt="NokLogo" width={100} height={50} />
+    <Image src={nokGroupMark} alt="NokLogo" width={50} height={50} />
   ) : (
-    <Image src={nokLogoBlack} alt="NokLogo" width={100} height={50} />
+    <Image src={nokGroupMark} alt="NokLogo" width={50} height={50} />
   )
 }
 

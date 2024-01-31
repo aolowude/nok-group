@@ -17,7 +17,7 @@
   z-index: 1;
   width: 50%;
   pointer-events: none;
-  /* background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, #000 100%); */
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, #000 100%);
   z-index: 10;
 }
 .fade-x:after {
@@ -29,11 +29,15 @@
   z-index: 1;
   pointer-events: none;
   width: 50%;
-  background: linear-gradient(90deg, #000 0z%, #00000000 100%);
+  background: linear-gradient(90deg, #000 0%, #00000000 100%);
 }
 .loop-swiper .swiper-slide {
   width: auto;
 }
 .swiper-wrapper {
   transition-timing-function: linear !important;
+}
+
+.containerPartners {
+  min-height: 480px;
 }
