@@ -31,9 +31,17 @@ import imageAndrewOlowude from '@/data/images/team/andrewOlowude.jpeg'
 import { loadArticles } from '@/lib/mdx'
 import Link from 'next/link'
 
+import {
+  Icon_NokAcademy,
+  Icon_NokMedia,
+  Icon_NokPay,
+  Icon_NokTech,
+} from '@/components/Icons'
+import LogoRow from '@/components/LogoRow'
+
 function Culture() {
   return (
-    <div className="mt-24 rounded-4xl bg-neutral-950 py-24 sm:mt-32 lg:mt-40 lg:py-32">
+    <div className="mt-10 rounded-4xl bg-neutral-950 py-16 sm:mt-10 lg:mt-36 lg:py-20">
       <SectionIntro
         eyebrow="Our Goal"
         title="Customisable and accessible banking"
@@ -144,7 +152,7 @@ function Team() {
             <div className="lg:col-span-3">
               <ul
                 role="list"
-                className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-8"
+                className="grid grid-cols-2 gap-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-8"
               >
                 {team.map((person) => (
                   <li key={person.name.replaceAll(' ', '')}>
@@ -199,13 +207,17 @@ export default async function About() {
         <p>We are leveraging AI to make banking more accessible and secure.</p>
         <div className="mt-10 max-w-2xl space-y-6 text-base"></div>
       </PageIntro>
-      <Container className="mt-16">
+
+      {/* Icons */}
+      <LogoRow />
+
+      {/* <Container className="mt-16">
         <StatList>
           <StatListItem value="35" label="partners" />
           <StatListItem value="3" label="subsidiaries" />
           <StatListItem value="$500K+" label="raised" />
         </StatList>
-      </Container>
+      </Container> */}
 
       <Culture />
 

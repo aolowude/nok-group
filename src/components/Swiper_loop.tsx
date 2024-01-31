@@ -96,7 +96,7 @@ export const Loop_Swiper_wrapper: FC<Loop_Swiper_wrapperPROPS> = ({
   return (
     <div className={`swiper-wrapper-icons-${name || ''}`}>
       <Swiper
-        spaceBetween={isSmallScreen ? 100 : 50}
+        spaceBetween={isSmallScreen ? 150 : 50}
         speed={10000 / 2}
         loop={true}
         // centeredSlides={true}
@@ -114,7 +114,7 @@ export const Loop_Swiper_wrapper: FC<Loop_Swiper_wrapperPROPS> = ({
         slidesPerView={isSmallScreen ? 2 : 3}
         modules={[Autoplay]}
         className="loop-swiper"
-        pagination={true}
+        pagination={false}
       >
         {children}
       </Swiper>
