@@ -36,14 +36,14 @@ export function Offices({
           Lagos, Nigeria
         </Office>
       </li>
-      <li>
+      <li className="text-right md:text-center">
         <Office name="UK" invert={invert}>
           London, United Kingdom
         </Office>
       </li>
-      <li>
+      <li className="text-left md:text-right">
         <Office name="Mauritius" invert={invert}>
-          Mauritius
+          Port Louis, Mauritius
         </Office>
       </li>
     </ul>

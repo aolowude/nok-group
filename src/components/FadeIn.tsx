@@ -18,7 +18,7 @@ export function FadeIn(
       initial="hidden"
       whileInView="visible"
       variants={{
-        hidden: { opacity: 0, y: shouldReduceMotion ? 0 : 42 },
+        hidden: { opacity: 0, y: shouldReduceMotion ? 0 : 60 },
         visible: { opacity: 1, y: 0 },
       }}
       transition={{ duration: 1 }}

@@ -77,7 +77,7 @@ function CaseStudies({
       <div className="mx-auto mt-16 flex max-w-7xl px-6 lg:px-8">
         <SectionIntro
           title="Simplifying banking and education with technology"
-          className="mt-24 sm:mt-32 lg:mt-40"
+          className="mt-10"
         >
           <p>
             We are a team of global experts building an all encompassing
@@ -85,7 +85,16 @@ function CaseStudies({
             and multimedia delivery
           </p>
         </SectionIntro>
-        {/* <Image src={africaMapNok} alt="Africa Map Nok" width={400} /> */}
+        <FadeInStagger>
+          <FadeIn>
+            <Image
+              src={africaMapNok}
+              alt="Africa Map Nok"
+              width={400}
+              className="hidden lg:block"
+            />
+          </FadeIn>
+        </FadeInStagger>
       </div>
       <Container className="mt-16">
         <FadeInStagger className="grid grid-cols-1 gap-8 lg:grid-cols-3">
