@@ -41,7 +41,7 @@ const clients = [
 function Partners() {
   return (
     // <div className="max-w-8xl mx-auto mt-24 px-6 sm:mt-32 lg:mt-40 lg:px-8">
-    <div className="containerPartners min-h-96 mt-24 rounded-4xl bg-black py-5 sm:mt-32 lg:mt-40">
+    <div className="containerPartners mt-24 rounded-4xl bg-black py-5 sm:mt-32 lg:mt-40">
       <Container>
         <FadeInStagger faster>
           <FadeIn>
@@ -74,16 +74,19 @@ function CaseStudies({
 }) {
   return (
     <>
-      <SectionIntro
-        title="Simplifying banking and education with technology"
-        className="mt-24 sm:mt-32 lg:mt-40"
-      >
-        <p>
-          We are a team of global experts building an all encompassing ecosystem
-          comprising of payment infrastructure, business empowerment and
-          multimedia delivery
-        </p>
-      </SectionIntro>
+      <div className="mx-auto mt-16 flex max-w-7xl px-6 lg:px-8">
+        <SectionIntro
+          title="Simplifying banking and education with technology"
+          className="mt-24 sm:mt-32 lg:mt-40"
+        >
+          <p>
+            We are a team of global experts building an all encompassing
+            ecosystem comprising of payment infrastructure, business empowerment
+            and multimedia delivery
+          </p>
+        </SectionIntro>
+        <Image src={africaMapNok} alt="Africa Map Nok" width={400} />
+      </div>
       <Container className="mt-16">
         <FadeInStagger className="grid grid-cols-1 gap-8 lg:grid-cols-3">
           {caseStudies.map((caseStudy) => (
@@ -202,16 +205,11 @@ export default async function Home() {
           </div>
           <FadeIn className="hidden lg:block lg:w-1/2">
             <Image src={nokTech} alt="NokTech" />
-            {/* <StylizedImageContain
-              src={nokTech}
-              sizes="41rem, 31rem"
-              className="justify-center lg:justify-end"
-            /> */}
           </FadeIn>
         </FadeInStagger>
       </Container>
-      <Partners />
 
+      <Partners />
       <CaseStudies caseStudies={caseStudies} />
 
       <FadeInStagger>
@@ -223,13 +221,11 @@ export default async function Home() {
           removes the divide between traditional fiat currency and the
           decentralised financial economy, aiding in the digitalisation of the
           African continent.
-          <div className="align-center flex justify-center pt-10">
+          <span className="align-center flex justify-center pt-10">
             <Logomark />
-          </div>
+          </span>
         </Testimonial>
       </FadeInStagger>
-
-      {/* <Services /> */}
 
       <ContactSection />
     </>
