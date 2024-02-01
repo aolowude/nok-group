@@ -82,7 +82,7 @@ function CaseStudies({
           <p>
             We are a team of global experts building an all encompassing
             ecosystem comprising of payment infrastructure, business empowerment
-            and multimedia delivery
+            and multimedia delivery.
           </p>
         </SectionIntro>
         <FadeInStagger>
@@ -91,7 +91,7 @@ function CaseStudies({
               src={africaMapNok}
               alt="Africa Map Nok"
               width={400}
-              className="hidden lg:block"
+              className="hover:scale-x duration-y hidden transform transition lg:block"
             />
           </FadeIn>
         </FadeInStagger>

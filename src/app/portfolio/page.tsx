@@ -4,17 +4,22 @@ import Image from 'next/image'
 import { Blockquote } from '@/components/Blockquote'
 import { ContactSection } from '@/components/ContactSection'
 import { Container } from '@/components/Container'
-import { FadeIn } from '@/components/FadeIn'
+import { FadeIn, FadeInStagger } from '@/components/FadeIn'
 import { GridList, GridListItem } from '@/components/GridList'
 import { GridPattern } from '@/components/GridPattern'
 import { List, ListItem } from '@/components/List'
 import { PageIntro } from '@/components/PageIntro'
 import { SectionIntro } from '@/components/SectionIntro'
-import { StylizedImage } from '@/components/StylizedImage'
+import { StylizedImageContain } from '@/components/StylizedImage'
 import { TagList, TagListItem } from '@/components/TagList'
 import imageLaptop from '@/images/laptop.jpg'
 import imageMeeting from '@/images/meeting.jpg'
 import imageWhiteboard from '@/images/whiteboard.jpg'
+
+import nokPayImage from '@/data/images/nokPay/nokpayImg.png'
+import nokAcademyImage from '@/data/images/nokAcademy/nokAcademyImg.png'
+import nokMediaImage from '@/data/images/nokMedia/nokMediaImg.png'
+import nokTechImage from '@/data/images/nokTech/nokTechImg.png'
 
 import nokPayLogo from '@/images/logos/mark/nokPay.svg'
 import nokAcademyLogo from '@/images/logos/mark/nokAcademy.svg'
@@ -28,22 +33,22 @@ function Section({
   logo,
 }: {
   title: string
-  image: React.ComponentPropsWithoutRef<typeof StylizedImage>
+  image: React.ComponentPropsWithoutRef<typeof StylizedImageContain>
   children: React.ReactNode
   logo?: any
 }) {
   return (
     <Container className="group/section [counter-increment:section]">
       <div className="lg:flex lg:items-center lg:justify-end lg:gap-x-8 lg:group-even/section:justify-start xl:gap-x-20">
-        <div className="flex justify-center">
+        <FadeInStagger className="flex justify-center">
           <FadeIn className="w-[33.75rem] flex-none lg:w-[45rem]">
-            <StylizedImage
+            <StylizedImageContain
               {...image}
               sizes="(min-width: 1024px) 41rem, 31rem"
               className="justify-center lg:justify-end lg:group-even/section:justify-start"
             />
           </FadeIn>
-        </div>
+        </FadeInStagger>
         <div className="mt-12 lg:mt-0 lg:w-[37rem] lg:flex-none lg:group-even/section:order-first">
           <FadeIn>
             {/* <div
@@ -72,27 +77,27 @@ function Section({
 
 function NokPay() {
   const tags = [
-    'Banking As A Service',
-    'Banking Licenses',
-    'KYC/AML',
+    'Customisable Banking',
+    'Multiple Currencies',
+    'FX',
     'Card Issuing',
-    "Services Centre's",
-    'Core Branding',
+    'Artificial Intelligence',
+    'Digital Assets',
+    'KYC',
   ]
   const accentColor = '#03EFE3'
 
   return (
-    <Section title="NokPay" image={{ src: imageWhiteboard }} logo={nokPayLogo}>
+    <Section title="NokPay" image={{ src: nokPayImage }} logo={nokPayLogo}>
       <div className="space-y-6 text-base text-neutral-600">
         <p>
           A state of the art{' '}
-          <strong className="font-semibold text-neutral-950">
-            AI powered customisable banking platform
+          <strong className="font-bold text-teal-500">
+            Artificial Intelligence powered banking platform
           </strong>{' '}
-          covering regulated fiat, crypto and card transaction services. Using
-          exciting marketing and branding to create a strong
-          Banking-as-a-Service identity. Spanning the gap between fiat and
-          crypto in a regulated, trustworthy environment.
+          with unique customisable features and covering regulated fiat, crypto
+          and card transaction services. Declutttering the banking experience
+          and unifying fiat and crypto in a regulated, trustworthy environment.
         </p>
       </div>
 
@@ -152,12 +157,12 @@ function NokAcademy() {
     'Minting through XSM',
     ' Tokenisation',
   ]
-  const accentColor = '#F0AD66'
+  const accentColor = '#CC6927'
 
   return (
     <Section
       title="NokAcademy"
-      image={{ src: imageLaptop, shape: 1 }}
+      image={{ src: nokAcademyImage, shape: 2 }}
       logo={nokAcademyLogo}
     >
       <div className="space-y-6 text-base text-neutral-600">
@@ -193,7 +198,7 @@ function NokAcademy() {
             <span
               key={index}
               style={{ color: '#fff' }}
-              className={` mb-2 mr-2 inline-block rounded-full border border-[#363D46]/50 bg-[#5B40FF] bg-[${accentColor}]
+              className={` mb-2 mr-2 inline-block rounded-full border border-[#CC6927]/50  bg-[${accentColor}]
                   px-[10px] pb-[1px]
                   pt-[2px] text-sm font-medium leading-6 text-white`}
             >
@@ -220,7 +225,7 @@ function NokMedia() {
   return (
     <Section
       title="NokMedia"
-      image={{ src: imageMeeting, shape: 2 }}
+      image={{ src: nokMediaImage, shape: 2 }}
       logo={nokMediaLogo}
     >
       <div className="space-y-6 text-base text-neutral-600">
@@ -282,7 +287,7 @@ function NokTech() {
   return (
     <Section
       title="NokTech"
-      image={{ src: imageLaptop, shape: 1 }}
+      image={{ src: nokTechImage, shape: 1 }}
       logo={nokTechLogo}
     >
       <div className="space-y-6 text-base text-neutral-600">
@@ -319,7 +324,7 @@ function NokTech() {
             <span
               key={index}
               style={{ color: '#fff' }}
-              className={` mb-2 mr-2 inline-block rounded-full border border-[#363D46]/50 bg-[#5B40FF] bg-[${accentColor}]
+              className={` mb-2 mr-2 inline-block rounded-full border border-[#5B40FF]/50 bg-[${accentColor}]
                   px-[10px] pb-[1px]
                   pt-[2px] text-sm font-medium leading-6 text-white`}
             >
@@ -355,29 +360,28 @@ function Values() {
       <Container className="mt-24">
         <GridList>
           <GridListItem title="Meticulous">
-            The first part of any partnership is getting our designer to put
-            your logo in our template. The second step is getting them to do the
-            colors.
+            Each of our partnerships is aimed towards providing the best
+            solutions for users with the highest assurance of quality.
           </GridListItem>
           <GridListItem title="Efficient">
-            We pride ourselves on never missing a deadline which is easy because
-            most of the work was done years ago.
+            We pride ourselves on utilising tools and frameworks that are
+            tailored to the problems they are solving.
           </GridListItem>
           <GridListItem title="Adaptable">
-            Every business has unique needs and our greatest challenge is
-            shoe-horning those needs into something we already built.
+            Dynamic software platfroms and real life systems allow us our
+            offerings be robust.
           </GridListItem>
-          <GridListItem title="Honest">
-            We are transparent about all of our processes, banking on the simple
-            fact our clients never actually read anything.
+          <GridListItem title="Secure">
+            Transparency in all our processes and choices allow for a trust
+            relationship to exist between us and end users.
           </GridListItem>
-          <GridListItem title="Loyal">
-            We foster long-term relationships with our clients that go beyond
-            just delivering a product, allowing us to invoice them for decades.
+          <GridListItem title="Relatable">
+            We are solving problems we are also facing, allowing us to see from
+            various perspectives.
           </GridListItem>
           <GridListItem title="Innovative">
-            The technological landscape is always evolving and so are we. We are
-            constantly on the lookout for new open source projects to clone.
+            Tech is always evolving and so are we as we are constantly learning
+            and iteratively improving.
           </GridListItem>
         </GridList>
       </Container>
@@ -396,15 +400,18 @@ export default function Process() {
     <>
       <PageIntro eyebrow="Our Products" title="Nok Ecosystem">
         <p>
-          We have carefully curated our offerings to the African market with a
-          global mindset.
+          Carefully curated offerings for the African market with a global
+          mindset.
         </p>
       </PageIntro>
 
       <div className="mt-24 space-y-24 [counter-reset:section] sm:mt-32 sm:space-y-32 lg:mt-40 lg:space-y-40">
         <NokPay />
+        <hr />
         <NokAcademy />
+        <hr />
         <NokMedia />
+        <hr />
         <NokTech />
       </div>
 

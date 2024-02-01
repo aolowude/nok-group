@@ -14,14 +14,14 @@ export default function LogoRow() {
           <Image
             className=" max-h-12  object-contain lg:col-span-1"
             src={NokPayLogo}
-            alt="Reform"
+            alt="Nok Pay"
             // width={158}
             height={33}
           />
           <Image
             className=" max-h-12  object-contain lg:col-span-1"
             src={NokTechLogo}
-            alt="Transistor"
+            alt="Nok Tech"
             // width={158}
             height={33}
           />
@@ -29,14 +29,14 @@ export default function LogoRow() {
           <Image
             className=" max-h-12  object-contain lg:col-span-1"
             src={NokAcademyLogo}
-            alt="Tuple"
+            alt="Nok Academy"
             // width={158}
             height={33}
           />
           <Image
             className=" max-h-12  object-contain  lg:col-span-1"
             src={NokMediaLogo}
-            alt="SavvyCal"
+            alt="Nok Media"
             // width={158}
             height={33}
           />

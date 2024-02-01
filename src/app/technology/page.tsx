@@ -36,7 +36,7 @@ function CaseStudies({
     <Container className="mt-40">
       <FadeIn>
         <h2 className="font-display text-2xl font-semibold text-neutral-950">
-          Our Companies
+          Our Divisions
         </h2>
       </FadeIn>
       <div className="mt-10 space-y-20 sm:space-y-24 lg:space-y-32">
@@ -76,7 +76,7 @@ function CaseStudies({
                       <p key={paragraph}>{paragraph}</p>
                     ))}
                   </div>
-                  <div className="mt-8 flex">
+                  {/* <div className="mt-8 flex">
                     <Button
                       href={caseStudy.href}
                       aria-label={`Read case study: ${caseStudy.client}`}
@@ -91,7 +91,7 @@ function CaseStudies({
                     >
                       {caseStudy.testimonial.content}
                     </Blockquote>
-                  )}
+                  )} */}
                 </div>
               </Border>
             </article>
