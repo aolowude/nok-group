@@ -97,7 +97,8 @@ function NokPay() {
           </strong>{' '}
           with unique customisable features and covering regulated fiat, crypto
           and card transaction services. Declutttering the banking experience
-          and unifying fiat and crypto in a regulated, trustworthy environment.
+          and unifying the fiat and digital worlds in a regulated, trustworthy
+          environment.
         </p>
       </div>
 
@@ -162,7 +163,7 @@ function NokAcademy() {
   return (
     <Section
       title="NokAcademy"
-      image={{ src: nokAcademyImage, shape: 2 }}
+      image={{ src: nokAcademyImage, shape: 5 }}
       logo={nokAcademyLogo}
     >
       <div className="space-y-6 text-base text-neutral-600">
@@ -198,7 +199,7 @@ function NokAcademy() {
             <span
               key={index}
               style={{ color: '#fff' }}
-              className={` mb-2 mr-2 inline-block rounded-full border border-[#CC6927]/50  bg-[${accentColor}]
+              className={` mb-2 mr-2 inline-block rounded-full border border-[#CC6927]/50  bg-[#CC6927]
                   px-[10px] pb-[1px]
                   pt-[2px] text-sm font-medium leading-6 text-white`}
             >
@@ -225,7 +226,7 @@ function NokMedia() {
   return (
     <Section
       title="NokMedia"
-      image={{ src: nokMediaImage, shape: 2 }}
+      image={{ src: nokMediaImage, shape: 4 }}
       logo={nokMediaLogo}
     >
       <div className="space-y-6 text-base text-neutral-600">
@@ -324,7 +325,7 @@ function NokTech() {
             <span
               key={index}
               style={{ color: '#fff' }}
-              className={` mb-2 mr-2 inline-block rounded-full border border-[#5B40FF]/50 bg-[${accentColor}]
+              className={` mb-2 mr-2 inline-block rounded-full border border-[#5B40FF]/50 bg-[#5B40FF]
                   px-[10px] pb-[1px]
                   pt-[2px] text-sm font-medium leading-6 text-white`}
             >

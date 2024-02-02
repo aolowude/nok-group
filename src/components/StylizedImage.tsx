@@ -18,6 +18,23 @@ const shapes = [
     height: 680,
     path: 'M632.827 9.245A11.5 11.5 0 0 1 644.104 0h63.366c7.257 0 12.7 6.64 11.277 13.755l-25.6 128A11.5 11.5 0 0 1 681.87 151h-28.275a15.999 15.999 0 0 0-15.689 12.862l-95.832 479.159c-4.3 21.502-23.18 36.979-45.107 36.979H178.502c-29.028 0-50.8-26.557-45.107-55.021l102.4-512C240.096 91.477 258.975 76 280.902 76h318.465c10.136 0 21.179-5.35 23.167-15.288l10.293-51.467Zm0 479A11.5 11.5 0 0 1 644.104 479h63.366c7.257 0 12.7 6.639 11.277 13.755l-25.6 128A11.5 11.5 0 0 1 681.87 630h-63.366c-7.257 0-12.7-6.639-11.277-13.755l25.6-128ZM37.104 159a11.5 11.5 0 0 0-11.277 9.245l-25.6 128C-1.196 303.361 4.247 310 11.504 310H74.87a11.5 11.5 0 0 0 11.277-9.245l24.76-123.798a.03.03 0 0 1 .052-.012c.015.021.048.012.052-.014C114.016 158.98 120.134 151 143 151h58.87a11.5 11.5 0 0 0 11.277-9.245l25.6-128C240.17 6.64 234.727 0 227.47 0h-63.366a11.5 11.5 0 0 0-11.277 9.245l-24.754 123.771c-.002.011-.016.015-.024.006-.007-.009-.021-.005-.023.007-3.469 18.452-13.551 25.107-24.88 25.981-.848.065-1.699 0-2.549-.009l-.127-.001H37.104Z',
   },
+  {
+    width: 655,
+    height: 680,
+    path: 'M50,650 a900,600 1 1 1 100,0 a500,500 0 1 1 0,0',
+  },
+  // Teardrop
+  {
+    width: 655,
+    height: 680,
+    path: 'M0,10 C510.329,0 555,154.671 655,175 C655,695 600,680 0,680 C144.671,680 0,645.329 0,0 C0,',
+  },
+  // Rectangle to fill viewport
+  {
+    width: 655,
+    height: 680,
+    path: 'M0,60 L605,70 L650,655 L0,660 Z',
+  },
 ]
 
 type ImagePropsWithOptionalAlt = Omit<ImageProps, 'alt'> & { alt?: string }
@@ -26,7 +43,7 @@ export function StylizedImage({
   shape = 0,
   className,
   ...props
-}: ImagePropsWithOptionalAlt & { shape?: 0 | 1 | 2 }) {
+}: ImagePropsWithOptionalAlt & { shape?: 0 | 1 | 2 | 3 | 4 | 5 }) {
   let id = useId()
   let { width, height, path } = shapes[shape]
 
@@ -39,7 +56,8 @@ export function StylizedImage({
               <Image
                 alt=""
                 className="w-full bg-neutral-100 object-cover"
-                style={{ aspectRatio: `${width} / ${height}` }}
+                // style={{ aspectRatio: `${width} / ${height}` }}
+                style={{ aspectRatio: 0.84 }}
                 {...props}
               />
             </foreignObject>
@@ -69,7 +87,7 @@ export function StylizedImageContain({
   shape = 0,
   className,
   ...props
-}: ImagePropsWithOptionalAlt & { shape?: 0 | 1 | 2 }) {
+}: ImagePropsWithOptionalAlt & { shape?: 0 | 1 | 2 | 3 | 4 | 5 }) {
   let id = useId()
   let { width, height, path } = shapes[shape]
 
@@ -82,7 +100,8 @@ export function StylizedImageContain({
               <Image
                 alt=""
                 className="w-full bg-neutral-100 object-contain"
-                style={{ aspectRatio: `${width} / ${height}` }}
+                // style={{ aspectRatio: `${width} / ${height}` }}
+                style={{ aspectRatio: 655 / 755 }}
                 {...props}
               />
             </foreignObject>
