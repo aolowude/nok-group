@@ -1,6 +1,6 @@
 import { type Metadata } from 'next'
 import Image from 'next/image'
-import Link from 'next/Link'
+import Link from 'next/link'
 
 import { Blockquote } from '@/components/Blockquote'
 import { Border } from '@/components/Border'

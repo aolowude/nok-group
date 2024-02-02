@@ -1,4 +1,4 @@
-import Link from 'next/Link'
+import Link from 'next/link'
 import clsx from 'clsx'
 
 import { Border } from '@/components/Border'
