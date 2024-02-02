@@ -1,6 +1,6 @@
 import { useId } from 'react'
 import { type Metadata } from 'next'
-import Link from 'next/link'
+import Link from 'next/Link'
 
 import { Border } from '@/components/Border'
 import { Button } from '@/components/Button'
@@ -100,10 +100,11 @@ function ContactDetails() {
         Our Location
       </h2>
       <p className="mt-6 text-base text-neutral-600">
-        Our 2 central hubs are London and Lagos for now.
+        We are keen to grow our partnerships so let us know if you want to
+        collaborate in any way.
       </p>
 
-      <Offices className="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-2" />
+      {/* <Offices className="mt-10 grid grid-cols-1 gap-2 sm:grid-cols-2" /> */}
 
       <Border className="mt-16 pt-16">
         <h2 className="font-display text-base font-semibold text-neutral-950">
@@ -112,6 +113,7 @@ function ContactDetails() {
         <dl className="mt-6 grid grid-cols-1 gap-8 text-sm sm:grid-cols-2">
           {[
             ['Nok', 'nok@nokgroup.africa'],
+            ['Info', 'info@nokgroup.africa'],
             // ['Phone', '+44 792 337 8995'],
           ].map(([label, email]) => (
             <div key={email}>

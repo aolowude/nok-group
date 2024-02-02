@@ -8,7 +8,7 @@ import {
   useRef,
   useState,
 } from 'react'
-import Link from 'next/link'
+import Link from 'next/Link'
 import { usePathname } from 'next/navigation'
 import clsx from 'clsx'
 import { motion, MotionConfig, useReducedMotion } from 'framer-motion'

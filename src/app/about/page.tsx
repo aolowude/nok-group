@@ -29,7 +29,7 @@ import imageTimOBrien from '@/data/images/team/timOBrien.jpeg'
 import imageAndrewOlowude from '@/data/images/team/andrewOlowude.jpeg'
 
 import { loadArticles } from '@/lib/mdx'
-import Link from 'next/link'
+import Link from 'next/Link'
 
 import {
   Icon_NokAcademy,
