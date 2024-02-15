@@ -17,10 +17,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className="h-full bg-neutral-950 text-base antialiased">
       <body className="flex min-h-full flex-col">
-        <SplashPage />
+        {/* <SplashPage /> */}
         {/* Comment out to hide main site */}
-        {/* <RootLayout>{children}</RootLayout>
-        <ScrollToTopButton /> */}
+        <RootLayout>{children}</RootLayout>
+        <ScrollToTopButton />
       </body>
     </html>
   )
