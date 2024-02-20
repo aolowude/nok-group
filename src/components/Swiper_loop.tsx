@@ -45,10 +45,10 @@ function Swiper_loop() {
     if (!carousel) return null
 
     return carousel.map((image, index) => (
-      <SwiperSlide key={image.src}>
+      <SwiperSlide key={image.src} className="flex justify-center">
         <Image
           src={image.src}
-          alt="Picture of the author"
+          alt="Partner Logo"
           width={image.width / (image.height / 41)}
           height={41}
           blurDataURL={image.blurDataURL}
@@ -60,7 +60,7 @@ function Swiper_loop() {
   return (
     <div className="relative pb-[20px] pt-[0px] lg:pb-[30px] lg:pt-[5px]">
       <div className="fade-x relative">
-        <div className="mt-[40px] flex flex-col gap-[60px] lg:mt-[20px]">
+        <div className="mt-[40px] flex flex-col justify-center gap-[60px] lg:mt-[20px]">
           <Loop_Swiper_Partners__wrapper loop>
             {renderCarousel(carousel1 || null)}
           </Loop_Swiper_Partners__wrapper>
@@ -96,9 +96,9 @@ export const Loop_Swiper_wrapper: FC<Loop_Swiper_wrapperPROPS> = ({
   return (
     <div className={`swiper-wrapper-icons-${name || ''}`}>
       <Swiper
-        spaceBetween={isSmallScreen ? 150 : 50}
-        speed={10000 / 2}
-        loop={true}
+        spaceBetween={150}
+        speed={10000}
+        loop={loop}
         // centeredSlides={true}
         autoplay={
           loop
@@ -110,8 +110,8 @@ export const Loop_Swiper_wrapper: FC<Loop_Swiper_wrapperPROPS> = ({
               }
             : false
         }
-        // slidesPerView={'auto'}
-        slidesPerView={isSmallScreen ? 2 : 3}
+        slidesPerView={'auto'}
+        // slidesPerView={isSmallScreen ? 2 : 3}
         modules={[Autoplay]}
         className="loop-swiper"
         pagination={false}
@@ -138,7 +138,7 @@ export const Loop_Swiper_Partners__wrapper: FC<Loop_Swiper_wrapperPROPS> = ({
       <Swiper
         spaceBetween={isSmallScreen ? 50 : 75}
         speed={10000}
-        loop={true}
+        loop={loop}
         // centeredSlides={true}
         autoplay={
           loop
@@ -150,8 +150,8 @@ export const Loop_Swiper_Partners__wrapper: FC<Loop_Swiper_wrapperPROPS> = ({
               }
             : false
         }
-        // slidesPerView={'auto'}
-        slidesPerView={isSmallScreen ? 3 : 5}
+        slidesPerView={'auto'}
+        // slidesPerView={isSmallScreen ? 3 : 5}
         modules={[Autoplay]}
         className="loop-swiper"
         pagination={false}

@@ -15,7 +15,8 @@ async function loadEntries<T extends { date: string }>(
           return {
             ...metadata,
             metadata,
-            href: `/${directory}/${filename.replace(/\/page\.mdx$/, '')}`,
+            // href: `/${directory}/${filename.replace(/\/page\.mdx$/, '')}`,
+            href: `/portfolio#${filename.replace(/\/page\.mdx$/, '')}`,
           }
         },
       ),

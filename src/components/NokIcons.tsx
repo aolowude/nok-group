@@ -4,6 +4,8 @@ import type { FC } from 'react'
 import { Loop_Swiper_wrapper } from './Swiper_loop'
 import {
   Icon_NokAcademy,
+  Icon_NokFinance,
+  Icon_NokLabs,
   Icon_NokMedia,
   Icon_NokPay,
   Icon_NokTech,
@@ -32,6 +34,13 @@ const NokIcons: FC<NokIconsProps> = ({ name, loop }) => {
 
       <SwiperSlide>
         <Icon_NokAcademy />
+      </SwiperSlide>
+      <SwiperSlide>
+        <Icon_NokLabs />
+      </SwiperSlide>
+
+      <SwiperSlide>
+        <Icon_NokFinance />
       </SwiperSlide>
     </Loop_Swiper_wrapper>
   )

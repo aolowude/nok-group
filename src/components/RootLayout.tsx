@@ -237,10 +237,10 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
                     </h2>
                     <Offices
                       invert
-                      className="mt-6 grid grid-cols-1 gap-8 sm:grid-cols-2"
+                      className="mt-6 grid grid-cols-1 gap-8 sm:grid-cols-3"
                     />
                   </div>
-                  <div className="sm:border-l sm:border-transparent sm:pl-16">
+                  <div className="flex flex-col items-end sm:border-l sm:border-transparent sm:pl-16">
                     <h2 className="font-display text-base font-semibold text-white">
                       Follow us
                     </h2>

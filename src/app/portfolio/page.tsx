@@ -407,13 +407,21 @@ export default function Process() {
       </PageIntro>
 
       <div className="mt-24 space-y-24 [counter-reset:section] sm:mt-32 sm:space-y-32 lg:mt-40 lg:space-y-40">
-        <NokPay />
+        <span id="nok-pay">
+          <NokPay />
+        </span>
         <hr />
-        <NokAcademy />
+        <span id="nok-academy">
+          <NokAcademy />
+        </span>
         <hr />
-        <NokMedia />
+        <span id="nok-media">
+          <NokMedia />
+        </span>
         <hr />
-        <NokTech />
+        <span id="nok-tech">
+          <NokTech />
+        </span>
       </div>
 
       <Values />
