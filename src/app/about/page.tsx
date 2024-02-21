@@ -10,33 +10,24 @@ import { PageIntro } from '@/components/PageIntro'
 import { PageLinks } from '@/components/PageLinks'
 import { SectionIntro } from '@/components/SectionIntro'
 import { StatList, StatListItem } from '@/components/StatList'
-import imageAngelaFisher from '@/images/team/angela-fisher.jpg'
-import imageBenjaminRussel from '@/images/team/benjamin-russel.jpg'
-import imageBlakeReid from '@/images/team/blake-reid.jpg'
-import imageChelseaHagon from '@/images/team/chelsea-hagon.jpg'
-import imageDriesVincent from '@/images/team/dries-vincent.jpg'
-import imageEmmaDorsey from '@/images/team/emma-dorsey.jpg'
-import imageJeffreyWebb from '@/images/team/jeffrey-webb.jpg'
-import imageKathrynMurphy from '@/images/team/kathryn-murphy.jpg'
-import imageLeonardKrasner from '@/images/team/leonard-krasner.jpg'
-import imageLeslieAlexander from '@/images/team/leslie-alexander.jpg'
-import imageMichaelFoster from '@/images/team/michael-foster.jpg'
-import imageWhitneyFrancis from '@/images/team/whitney-francis.jpg'
+
 //NokImages
 import imageGregCussell from '@/data/images/team/gregCussell.jpeg'
 import imageChuOkadigbo from '@/data/images/team/chineduOkadigbo.jpeg'
 import imageTimOBrien from '@/data/images/team/timOBrien.jpeg'
 import imageAndrewOlowude from '@/data/images/team/andrewOlowude.jpeg'
+import imageLindenLeadbetter from '@/data/images/team/lindenLeadbetter.jpg'
+import imageStylianosKampakis from '@/data/images/team/stylianosKampakis.jpg'
+import imageMarkWalsh from '@/data/images/team/markWalsh.jpeg'
+import imageToisnAshafa from '@/data/images/team/toisnAshafa.jpg'
+import imageAdamChorley from '@/data/images/team/adamChorley.jpg'
+import imageGregBeitchman from '@/data/images/team/gregBeitchman.jpg'
+import imageTomObafemi from '@/data/images/team/tomObafemi.jpg'
+// import imageRyan from '@/data/images/team/'
 
 import { loadArticles } from '@/lib/mdx'
 import Link from 'next/link'
 
-import {
-  Icon_NokAcademy,
-  Icon_NokMedia,
-  Icon_NokPay,
-  Icon_NokTech,
-} from '@/components/Icons'
 import LogoRow from '@/components/LogoRow'
 
 function Culture() {
@@ -95,6 +86,52 @@ const team = [
     image: { src: imageAndrewOlowude },
     url: 'https://www.linkedin.com/in/andrewolowude',
   },
+  {
+    name: 'Dr. Linden Leadbetter',
+    role: '',
+    image: { src: imageLindenLeadbetter },
+    url: 'https://www.linkedin.com/in/linden-leadbetter-59820a/',
+  },
+  {
+    name: 'Dr. Stylianos Kampakis',
+    role: '',
+    image: { src: imageStylianosKampakis },
+    url: 'https://www.linkedin.com/in/andrewolowude',
+  },
+  {
+    name: 'Mark Walsh',
+    role: '',
+    image: { src: imageMarkWalsh },
+    url: 'https://www.linkedin.com/in/andrewolowude',
+  },
+
+  {
+    name: 'Adam Chorley',
+    role: '',
+    image: { src: imageAdamChorley },
+    url: 'https://www.linkedin.com/in/adam-chorley-b848761a/',
+  },
+  {
+    name: 'Tosin Ashafa',
+    role: '',
+    image: { src: imageToisnAshafa },
+    url: 'https://www.linkedin.com/in/basheertosinashafa/',
+  },
+
+  {
+    name: 'Greg BeitchMann',
+    role: '',
+    image: { src: imageGregBeitchman },
+    url: 'https://www.linkedin.com/in/greg-beitchman-56a2942/',
+  },
+
+  {
+    name: 'Tom Obafemi',
+    role: '',
+    image: { src: imageTomObafemi },
+    url: 'https://www.linkedin.com/in/tom-obafemi-7671ab14/',
+  },
+
   // {
   //   name: 'Chelsea Hagon',
   //   role: 'Senior Developer',
@@ -199,12 +236,9 @@ export default async function About() {
 
   return (
     <>
-      <PageIntro
-        eyebrow="About Us"
-        title="Our strength is in our extensive expertise and vision"
-      >
+      <PageIntro eyebrow="About Us" title="Extensive expertise and vision">
         <p>Nok was started to simplify banking for all.</p>
-        <p>We are leveraging AI to make banking more accessible and secure.</p>
+        <p>We are leveraging AI to make products more accessible and secure.</p>
         <div className="mt-10 max-w-2xl space-y-6 text-base"></div>
       </PageIntro>
 
@@ -223,12 +257,12 @@ export default async function About() {
 
       <Team />
 
-      <PageLinks
+      {/* <PageLinks
         className="mt-24 sm:mt-32 lg:mt-40"
         title="Nok Blog"
         intro="We have a lot of research and ideas in active discussion"
         pages={blogArticles}
-      />
+      /> */}
 
       <ContactSection />
     </>
