@@ -23,7 +23,7 @@ import imageToisnAshafa from '@/data/images/team/toisnAshafa.jpg'
 import imageAdamChorley from '@/data/images/team/adamChorley.jpg'
 import imageGregBeitchman from '@/data/images/team/gregBeitchman.jpg'
 import imageTomObafemi from '@/data/images/team/tomObafemi.jpg'
-// import imageRyan from '@/data/images/team/'
+import imageKevinNjinga from '@/data/images/team/kevinNjinga.jpg'
 
 import { loadArticles } from '@/lib/mdx'
 import Link from 'next/link'
@@ -35,7 +35,7 @@ function Culture() {
     <div className="mt-10 rounded-4xl bg-neutral-950 py-16 sm:mt-10 lg:mt-36 lg:py-20">
       <SectionIntro
         eyebrow="Our Goal"
-        title="Customisable and accessible banking"
+        title="Customisable and accessible solutions"
         invert
       >
         <p>
@@ -98,18 +98,24 @@ const team = [
     image: { src: imageStylianosKampakis },
     url: 'https://www.linkedin.com/in/andrewolowude',
   },
-  {
-    name: 'Mark Walsh',
-    role: '',
-    image: { src: imageMarkWalsh },
-    url: 'https://www.linkedin.com/in/andrewolowude',
-  },
 
+  {
+    name: 'Kevin Njinga',
+    role: '',
+    image: { src: imageKevinNjinga },
+    url: 'https://www.linkedin.com/in/finjap-kevin-njinga/',
+  },
   {
     name: 'Adam Chorley',
     role: '',
     image: { src: imageAdamChorley },
     url: 'https://www.linkedin.com/in/adam-chorley-b848761a/',
+  },
+  {
+    name: 'Mark Walsh',
+    role: '',
+    image: { src: imageMarkWalsh },
+    url: 'https://www.linkedin.com/in/andrewolowude',
   },
   {
     name: 'Tosin Ashafa',
@@ -119,7 +125,7 @@ const team = [
   },
 
   {
-    name: 'Greg BeitchMann',
+    name: 'Greg Beitchman',
     role: '',
     image: { src: imageGregBeitchman },
     url: 'https://www.linkedin.com/in/greg-beitchman-56a2942/',
