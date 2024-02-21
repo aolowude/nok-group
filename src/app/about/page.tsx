@@ -69,7 +69,7 @@ const team = [
     url: 'https://www.linkedin.com/in/greg-cussell-7b650415/',
   },
   {
-    name: 'Chuba Okadigbo',
+    name: 'Chu Okadigbo',
     role: 'Co-Founder',
     image: { src: imageChuOkadigbo },
     url: 'https://www.linkedin.com/in/chinedu-okadigbo-361198121/',
