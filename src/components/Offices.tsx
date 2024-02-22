@@ -43,7 +43,7 @@ export function Offices({
       </li>
       <li className="text-left md:text-right">
         <Office name="Mauritius" invert={invert}>
-          Port Louis, Mauritius
+          Ebene, Mauritius
         </Office>
       </li>
     </ul>
