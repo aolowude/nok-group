@@ -41,3 +41,7 @@
 .containerPartners {
   min-height: 480px;
 }
+
+.scrollToTopBg {
+  background-color: #00ffc6;
+}
