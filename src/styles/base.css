@@ -45,3 +45,9 @@
 .scrollToTopBg {
   background-color: #00ffc6;
 }
+
+.scrollToTopBg:hover {
+  background-color: #74ffe1;
+  scale: 1.2;
+  transition: all;
+}

@@ -24,6 +24,7 @@ import imageAdamChorley from '@/data/images/team/adamChorley.jpg'
 import imageGregBeitchman from '@/data/images/team/gregBeitchman.jpg'
 import imageTomObafemi from '@/data/images/team/tomObafemi.jpg'
 import imageKevinNjinga from '@/data/images/team/kevinNjinga.jpg'
+import imageRyanBrownlow from '@/data/images/team/ryanBrownlow.jpg'
 
 import { loadArticles } from '@/lib/mdx'
 import Link from 'next/link'
@@ -96,7 +97,7 @@ const team = [
     name: 'Dr. Stylianos Kampakis',
     role: '',
     image: { src: imageStylianosKampakis },
-    url: 'https://www.linkedin.com/in/andrewolowude',
+    url: 'https://www.linkedin.com/in/dr-stylianos-kampakis/',
   },
 
   {
@@ -117,18 +118,25 @@ const team = [
     image: { src: imageMarkWalsh },
     url: 'https://www.linkedin.com/in/andrewolowude',
   },
-  {
-    name: 'Tosin Ashafa',
-    role: '',
-    image: { src: imageToisnAshafa },
-    url: 'https://www.linkedin.com/in/basheertosinashafa/',
-  },
+  // {
+  //   name: 'Tosin Ashafa',
+  //   role: '',
+  //   image: { src: imageToisnAshafa },
+  //   url: 'https://www.linkedin.com/in/basheertosinashafa/',
+  // },
 
   {
     name: 'Greg Beitchman',
     role: '',
     image: { src: imageGregBeitchman },
     url: 'https://www.linkedin.com/in/greg-beitchman-56a2942/',
+  },
+
+  {
+    name: 'Ryan Brownlow',
+    role: '',
+    image: { src: imageRyanBrownlow },
+    url: 'https://www.linkedin.com/in/ryan-brownlow-pharmd/',
   },
 
   {
@@ -195,7 +203,7 @@ function Team() {
             <div className="lg:col-span-3">
               <ul
                 role="list"
-                className="grid grid-cols-2 gap-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-8"
+                className="grid grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-4 xl:gap-8"
               >
                 {team.map((person) => (
                   <li key={person.name.replaceAll(' ', '')}>

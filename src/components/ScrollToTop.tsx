@@ -38,7 +38,7 @@ const ScrollToTopButton = () => {
       <button
         ref={buttonRef}
         onClick={handleClick}
-        className="border-teal text-teal scrollToTopBg invisible fixed bottom-0 right-0 mb-8 mr-8 rounded-full p-4 opacity-0 shadow-md transition duration-200 ease-in-out hover:bg-opacity-90"
+        className="border-teal text-teal  duration-00 invisible fixed bottom-0 right-0 mb-8 mr-8 rounded-full bg-[#00ffc6] bg-opacity-90 p-4 opacity-0 shadow-md transition ease-in-out hover:scale-110 hover:bg-[#afffed]"
       >
         <Image src={ScrollToTopIcon} width={20} alt="Scroll To Top Button" />
       </button>
