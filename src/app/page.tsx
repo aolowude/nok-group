@@ -188,7 +188,7 @@ function Services() {
 }
 
 export const metadata: Metadata = {
-  description: 'Revolutionary Pan African transformative digital ecosystem.',
+  description: 'Elevating Industries with powerful AI technology.',
 }
 
 export default async function Home() {
@@ -200,15 +200,14 @@ export default async function Home() {
         <FadeInStagger className="mt-10 flex">
           <div className="mt-10 lg:mt-20 lg:w-2/3">
             <FadeIn className="mt-10">
-              <h1 className="font-display text-3xl font-medium tracking-tight text-neutral-950 [text-wrap:balance] sm:text-5xl">
-                Revolutionary Pan African transformative digital ecosystem.
+              <h1 className="font-display text-2xl font-medium tracking-tight text-neutral-950 [text-wrap:balance] sm:text-5xl">
+                Elevating Industries <br />
+                with powerful AI technology.
               </h1>
-              <p
-                className="mt-6
-               text-xl text-neutral-600"
-              >
-                Bridging the technology gaps using Artificial Intelligence,
-                Web3.0 and blockchain.
+              <p className="text-md mt-6 text-neutral-600">
+                Our consultancy leverages top-tier AI integrations and
+                custom-built LLMs to drive innovation across multiple
+                industries.
               </p>
             </FadeIn>
           </div>
