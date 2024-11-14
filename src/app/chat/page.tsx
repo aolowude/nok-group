@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { ScrollArea } from '@/components/ui/scroll-area'
@@ -38,6 +38,26 @@ export default function Component() {
   const [messages, setMessages] = useState<Message[]>([])
   const [input, setInput] = useState('')
   const [isLoading, setIsLoading] = useState(false)
+  const messagesEndRef = useRef<HTMLDivElement>(null)
+  const scrollAreaRef = useRef<HTMLDivElement>(null)
+
+  const scrollToBottom = () => {
+    if (scrollAreaRef.current) {
+      const scrollContainer = scrollAreaRef.current.querySelector(
+        '[data-radix-scroll-area-viewport]',
+      )
+      if (scrollContainer) {
+        scrollContainer.scrollTo({
+          top: scrollContainer.scrollHeight,
+          behavior: 'smooth',
+        })
+      }
+    }
+  }
+
+  useEffect(() => {
+    scrollToBottom()
+  }, [messages]) // Scroll when messages change
 
   const handleSend = async (question: string) => {
     if (question.trim() === '') return
@@ -70,16 +90,15 @@ export default function Component() {
           {presetQuestions.map((question, index) => (
             <Button
               key={index}
-              // variant="outline"
-              className="w-full truncate bg-teal-50 text-left"
+              className="w-full truncate bg-teal-50 text-center text-xs lg:text-sm"
               onClick={() => handleSend(question)}
             >
               {question}
             </Button>
           ))}
         </div>
-        <div className="flex flex-grow flex-col overflow-hidden rounded-lg bg-gray-50 shadow-lg">
-          <ScrollArea className="flex-grow p-4 pb-8">
+        <div className="flex flex-grow flex-col overflow-hidden rounded-lg border bg-transparent shadow-lg">
+          <ScrollArea ref={scrollAreaRef} className="flex-grow p-4 pb-8">
             <div className="space-y-4">
               {messages.map((message, index) => (
                 <div
@@ -89,7 +108,7 @@ export default function Component() {
                   }`}
                 >
                   <div
-                    className={`lg:text-md max-w-[70%] rounded-lg p-3 text-sm shadow-md ${
+                    className={`lg:text-md max-w-[90%] rounded-lg px-3 py-2 text-sm font-medium shadow-md ${
                       message.isUser
                         ? 'bg-teal-500 text-white'
                         : 'bg-gray-100 text-teal-900'
@@ -114,6 +133,8 @@ export default function Component() {
                   </div>
                 </div>
               )}
+              <div ref={messagesEndRef} />{' '}
+              {/* Invisible element to scroll to */}
             </div>
           </ScrollArea>
           <div className="border-t p-4">
@@ -128,9 +149,13 @@ export default function Component() {
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 placeholder="Type your message..."
-                className="flex-grow"
+                className="flex-grow bg-white"
               />
-              <Button type="submit" disabled={isLoading}>
+              <Button
+                type="submit"
+                disabled={isLoading}
+                className="bg-teal-300"
+              >
                 Send
               </Button>
             </form>
