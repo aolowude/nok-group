@@ -261,7 +261,7 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
       >
         <motion.div
           layout
-          className="relative isolate flex w-full flex-col pt-9"
+          className="relative isolate mb-10 flex w-full flex-col pt-9"
         >
           <GridPattern
             className="absolute inset-x-0 -top-14 -z-10 h-[1000px] w-full fill-teal-50 stroke-teal-600/25 [mask-image:linear-gradient(to_bottom_left,white_40%,transparent_50%)]"
@@ -271,7 +271,7 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
 
           <main className="w-full flex-auto">{children}</main>
 
-          <Footer />
+          {/* <Footer /> */}
         </motion.div>
       </motion.div>
     </MotionConfig>
