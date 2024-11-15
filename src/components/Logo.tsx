@@ -30,8 +30,8 @@ export function Logo({
   fillOnHover?: boolean
 }) {
   return invert ? (
-    <Image src={nokLogoWhite} alt="NokLogo" width={200} />
+    <Image src={nokLogoWhite} alt="NokLogo" width={190} />
   ) : (
-    <Image src={nokLogoBlack} alt="NokLogo" width={200} />
+    <Image src={nokLogoBlack} alt="NokLogo" width={190} />
   )
 }

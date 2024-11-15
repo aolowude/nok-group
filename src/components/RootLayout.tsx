@@ -82,6 +82,13 @@ function Header({
           />
         </Link>
         <div className="flex items-center gap-x-8">
+          <Button
+            href="/chat"
+            invert={invert}
+            className="hidden bg-teal-500 md:block"
+          >
+            AI Chat
+          </Button>
           <Button href="/contact" invert={invert} className="hidden md:block">
             Contact us
           </Button>
